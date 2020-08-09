@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import config from "./config";
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 
 const COLS = {
@@ -34,7 +33,6 @@ class Leaderboard extends Component {
     }
 
     getData = () => {
-        console.log(process.env.REACT_APP_GOOGLE_API_KEY);
         const doc = new GoogleSpreadsheet('10rzTjo2N0e8Jv3u_5MITR15rPKyNP_PZhQZT8Y9BuI8');
         doc.useApiKey(process.env.REACT_APP_GOOGLE_API_KEY);
 
