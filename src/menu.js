@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Leaderboard from './Leaderboard';
 import OptionsList from './OptionsList';
-import ScoreboardPage from './ScoreboardPage';
+import ScoreboardMenu from './ScoreboardMenu';
 
 class Menu extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class Menu extends Component {
         if (this.state.activePage === "Leaderboard") {
             component = <Leaderboard />;
         } else if (this.state.activePage === "From file") {
-            component = <ScoreboardPage />
+            component = <ScoreboardMenu />
         }
 
         return (
