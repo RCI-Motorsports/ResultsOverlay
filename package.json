@@ -2,7 +2,7 @@
   "name": "live-data-browser",
   "version": "0.1.0",
   "private": true,
-  "homepage":"./",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -10,7 +10,8 @@
     "google-spreadsheet": "^3.0.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "react-transition-group": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",

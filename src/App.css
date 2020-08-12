@@ -36,33 +36,54 @@
   background-color: #7a7a7a;
 }
 
-.div-entry-1 {
-  background-color: #1618a7;
-  text-align: center;
+.Row {
+  margin:0 auto;
+  display: table;
+  width: 90%; /*Optional*/
+  table-layout: fixed; /*Optional*/
+  border-spacing: 0px 10px; /*Optional*/
+}
+
+.Column {
+  margin:0 auto;
+  display: table-cell;
+  background-color: #0e11da; /*Optional*/
+}
+
+.ColumnNum {
+  width: 5%;
+  margin:0 auto;
+  display: table-cell;
+  background-color: #0e11da; /*Optional*/
+}
+
+.Title {
+  position: fixed;
+  height:100px;
+  top: 25px;
+  left: 25%;
+  margin:0 auto;
+  background-color: #0e11da;
+  width: 50%;
   vertical-align: middle;
-  width: 1280px;
-  height: 80px;
-  display: grid;
-  grid-template-columns: 50% 50%;
+  line-height: 100px;
+}
+.Subtitle {
+  position: fixed;
+  top: 140px;
+  height: 60px;
+  left: 25%;
+  background-color: #0e11da;
+  width: 50%;
+  line-height: 55px;
+  vertical-align: middle;
 }
 
-.div-entry-2 {
-  background-color: #0d0e55;
-  text-align: center;
-  width: 1280px;
-  height: 80px;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
-.container {
-  columns: 2 auto;
-}
-
-h4
-{
-  display: inline-block;
-  text-align: center;
+.Scoreboard {
+  position: fixed;
+  top: 300px;
+  margin:0 auto;
+  left: 0%;
 }
 
 @keyframes App-logo-spin {

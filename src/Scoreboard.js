@@ -20,7 +20,7 @@ class Scoreboard extends Component {
     _handleKeyDown = (event) => {
         if (event.keyCode === 81) {
             let newPage = this.state.currentPage + 1;
-            if (newPage === this.props.props.leaderboard.length) {
+            if (newPage === this.props.content.leaderboard.length) {
                 newPage = 0;
             }
             
@@ -43,12 +43,12 @@ class Scoreboard extends Component {
     }
 
     render() {
-        const scoreBoardEntryList = <ScoreboardEntryList entries={this.props.props.leaderboard[this.state.currentPage]} visualstate={this.state.visState} />;
+        const scoreBoardEntryList = <ScoreboardEntryList entries={this.props.content.leaderboard[this.state.currentPage]} visualstate={this.state.visState} />;
 
         return (
-            <div>
-                <h1>{this.props.props.track}</h1>
-                <h3>{this.props.props.session}</h3>
+            <div className='Scoreboard'>
+                <div className='Title'>{this.props.title + " - " + this.props.content.track}</div>
+                <div className='Subtitle'>{this.props.content.session}</div>
                 {scoreBoardEntryList}
             </div>
         );

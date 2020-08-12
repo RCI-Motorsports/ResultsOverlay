@@ -18,8 +18,13 @@ class ScoreBoardEntry extends Component {
         }
 
         return (
-            <div key={ this.props.entry.car.carId } className={this.props.style}>
-                <h5>{ text }</h5><h5>{ this.props.entry.timing.bestLap }</h5>
+            <div key={ this.props.entry.car.carId } className='Row'>
+                <div className='ColumnNum'>{ this.props.entry.position }</div>
+                <div className='ColumnNum'>{ this.props.entry.car.raceNumber }</div>
+                <div className='Column'>{ text }</div>
+                <div className='Column'>{ this.props.entry.carName }</div>
+                <div className='Column'>{ this.props.entry.timing.bestLapFormatted }</div>
+                <div className='Column'>{ this.props.entry.timing.timeDiffFormatted }</div>
             </div>
         );
     }
