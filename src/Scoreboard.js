@@ -39,8 +39,6 @@ class Scoreboard extends Component {
         await this._clearEntries();
         this.currentPage = newPage;
         await this._addEntries();
-
-        
     }
 
     _clearEntries = async () => {
@@ -82,13 +80,6 @@ class Scoreboard extends Component {
         return p;
     }
 
-    _print = (text) => {
-        console.log('-----------------------------------------------');
-        console.log(text);
-        console.log('-----------------------------------------------');
-    }
-      
-
     componentDidMount() {
         document.addEventListener("keydown", this._handleKeyDown);
     }
@@ -100,7 +91,6 @@ class Scoreboard extends Component {
     render() {
         const entries = this.state.pageEntries;
         const visState = this.state.visState;
-        this._print(entries);
 
         return (
             <div className='Scoreboard'>
@@ -113,9 +103,6 @@ class Scoreboard extends Component {
                                 key={`${entry.car.carId}-transition`}
                                 classNames="item"
                                 timeout={500}
-                                onEnter={() => {
-                                    this._print("ENTERED");
-                                }}
                             >
                                 <ScoreBoardEntry key={entry.car.carId} entry={entry} visualstate={visState} style={idx % 2 === 0 ? 'div-entry-1' : 'div-entry-2'} />
                             </CSSTransition>
