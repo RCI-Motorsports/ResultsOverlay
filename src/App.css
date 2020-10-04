@@ -39,23 +39,86 @@
 .Row {
   margin:0 auto;
   display: table;
-  width: 90%; /*Optional*/
-  table-layout: fixed; /*Optional*/
-  border-spacing: 0px 10px; /*Optional*/
+  width: 90%;
+  height: 50px;
+  table-layout: fixed;
+  border-spacing: 0px 2px;
+  background-clip: border-box;
+}
+
+div.Scoreboard {
+  width: 1920;
+  height: 1080;
 }
 
 .Column {
+  height: 50px;
+  width: 10%;
   margin:0 auto;
   display: table-cell;
-  background-color: #0e11da; /*Optional*/
+  background-color: #000000; /*Optional*/
+  background: linear-gradient(0deg, rgba(17,17,17,1) 33%, rgba(34,34,34,1) 43%);
+  z-index: -100;
 }
 
-.ColumnNum {
-  width: 5%;
+.CarnumberCol {
+  width: 4.3%;
+  height: 50px;
   margin:0 auto;
   display: table-cell;
-  background-color: #0e11da; /*Optional*/
+  color: #000000;
+  background-image: url("./img/2.png");
+  background-clip: border-box;
+  position: absolute;
+  left: 223px;
+  padding-right: 5px;
 }
+
+.PositionCol {
+  width: 5%;
+  height: 50px;
+  margin:0 auto;
+  display: table-cell;
+  /*background-color: #6b6df3f8; /*Optional*/
+  background-image: url("./img/1.png");
+  background-clip: border-box;
+  position: absolute;
+}
+
+.DriverCol {
+  margin:0 auto;
+  display: table-cell;
+  background: linear-gradient(0deg, rgba(17,17,17,1) 33%, rgba(34,34,34,1) 43%);
+  position: absolute;
+  left: 313px;
+  z-index: -1;
+  width: 30%;
+  height: 50px;
+} 
+
+.CategoryCol {
+  width: 7.6%;
+  height: 50px;
+  margin:0 auto;
+  display: table-cell;
+  color: #000000;
+  background-image: url("./img/3.png");
+  background-clip: border-box;
+  position: absolute;
+  left: 1050px;
+  padding-right: 5px;
+} 
+
+.CarCol {
+  margin:0 auto;
+  display: table-cell;
+  background: linear-gradient(0deg, rgba(17,17,17,1) 33%, rgba(34,34,34,1) 43%);
+  position: absolute;
+  left: 1200px;
+  z-index: -1;
+  width: 30%;
+  height: 50px;
+} 
 
 .Title {
   position: fixed;
@@ -100,13 +163,13 @@
 }
 .item-enter-active {
   opacity: 1.0;
-  transition: opacity 200ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
 }
 .item-exit {
   opacity: 1;
 }
 .item-exit-active {
   opacity: 0;
-  transition: opacity 200ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
 }
 

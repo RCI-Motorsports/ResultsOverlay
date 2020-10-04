@@ -57,7 +57,7 @@ class Scoreboard extends Component {
         if (entries.length > 0) {
             setTimeout(() => { this._removeEntry(onCleared) }, 100);
         } else {
-            setTimeout(() => { onCleared() }, 200);
+            setTimeout(() => { onCleared() }, 500);
         }
     }
 

@@ -19,7 +19,7 @@ class ScoreboardMenu extends Component {
 
     chunkLeaderboardLines = (lines) => {
         let retArray = [];
-        let i, j, chunk = 10;
+        let i, j, chunk = 15;
         for (i = 0; i < lines.length; i += chunk) {
             let tmp = lines.slice(i, i + chunk);
             retArray.push(tmp);
@@ -86,11 +86,10 @@ class ScoreboardMenu extends Component {
             <div><button type="button" onClick={this.onUpload}>load</button></div>
         </div>;
         if (this.state.dataLoaded) {
-            // scoreboardScreen -> [scoreboardPage] -> scoreboard -> [scoreBoardEntry]
             component = <Scoreboard content={this.content} title={this.state.title}/>;
         }
         return (
-            <div>
+            <div className='Scoreboard'>
                 {component}
             </div>
         );

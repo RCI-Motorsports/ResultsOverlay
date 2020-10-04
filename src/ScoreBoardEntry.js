@@ -18,11 +18,12 @@ class ScoreBoardEntry extends Component {
         }
 
         return (
-            <div key={ `${this.props.entry.car.carId}` } className='Row'>
-                <div className='ColumnNum'>{ this.props.entry.position }</div>
-                <div className='ColumnNum'>{ this.props.entry.car.raceNumber }</div>
-                <div className='Column'>{ text }</div>
-                <div className='Column'>{ this.props.entry.carName }</div>
+            <div key={ this.props.entry.car.carId } className='Row'>
+                <div className='PositionCol'>{ this.props.entry.position }</div>
+                <div className='CarnumberCol'>{ this.props.entry.car.raceNumber }</div>
+                <div className='DriverCol'>{ text }</div>
+                <div className='CategoryCol'>PRO</div>
+                <div className='CarCol'>{ this.props.entry.carName }</div>
                 <div className='Column'>{ this.props.entry.timing.bestLapFormatted }</div>
                 <div className='Column'>{ this.props.entry.timing.timeDiffFormatted }</div>
             </div>
