@@ -17,12 +17,12 @@ class Menu extends Component {
         let component = <OptionsList onClickedOption={this.onClickedOption}/>;
         if (this.state.activePage === "Leaderboard") {
             component = <Leaderboard />;
-        } else if (this.state.activePage === "From file") {
+        } else if (this.state.activePage === "From results .json") {
             component = <ScoreboardMenu />
         }
 
         return (
-            <div>
+            <div className='MainMenu'>
                 {component}
             </div>
         );

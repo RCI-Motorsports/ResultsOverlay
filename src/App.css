@@ -8,6 +8,14 @@
   color: white;
 }
 
+.MainMenu {
+  vertical-align: middle;
+  display: table;
+  margin: auto;
+  background: rgb(83, 83, 83);
+  padding: 200px;
+}
+
 .Scoreboard {
   width: 1920px;
   height: 900px;

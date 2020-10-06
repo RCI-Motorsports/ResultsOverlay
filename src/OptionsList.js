@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Leaderboard from './Leaderboard';
 
 class OptionsList extends Component {
-    allOptions = ["Leaderboard", "From file"];
+    allOptions = [/*"Leaderboard", */"From results .json"];
 
     constructor(props) {
         super(props);
@@ -10,7 +10,7 @@ class OptionsList extends Component {
 
     render() {
         return (
-            <div>
+            <div className='MainMenu'>
                 {
                     this.allOptions.map((option, idx) => {
                         return (<div key={idx} background='black' onClick={() => {
