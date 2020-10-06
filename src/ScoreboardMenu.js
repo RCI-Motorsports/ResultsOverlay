@@ -80,10 +80,6 @@ class ScoreboardMenu extends Component {
 
         this.content = resultObj;
 
-
-        console.log(this.textInput);
-
-
         this.setState({dataLoaded: true});
     }
 

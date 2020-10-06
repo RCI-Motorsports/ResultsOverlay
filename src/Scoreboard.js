@@ -52,12 +52,12 @@ class Scoreboard extends Component {
 
     _removeEntry = (onCleared) => {
         let entries = [...this.state.pageEntries];
-        entries.pop();
+        entries.shift();
         this.setState({ pageEntries: entries });
         if (entries.length > 0) {
             setTimeout(() => { this._removeEntry(onCleared) }, 100);
         } else {
-            setTimeout(() => { onCleared() }, 100);
+            setTimeout(() => { onCleared() }, 400);
         }
     }
 
@@ -94,8 +94,7 @@ class Scoreboard extends Component {
 
         return (
             <div className='Scoreboard'>
-                <div className='Title'>{this.props.title + " - " + this.props.content.track}</div>
-                <div className='Subtitle'>{this.props.content.session}</div>
+                <div className='Title'>{`${this.props.title} - ${this.props.content.track} - ${this.props.content.session}`}</div>
                 <div />
                 <TransitionGroup>
                     {entries.map((entry, idx) => {
@@ -103,7 +102,7 @@ class Scoreboard extends Component {
                             <CSSTransition
                                 key={`${entry.car.carId}-transition`}
                                 classNames="item"
-                                timeout={500}
+                                timeout={2000}
                             >
                                 <ScoreBoardEntry key={entry.car.carId} entry={entry} visualstate={visState} style={idx % 2 === 0 ? 'div-entry-1' : 'div-entry-2'} />
                             </CSSTransition>
