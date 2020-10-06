@@ -6,26 +6,30 @@ import ScoreBoardEntry from './ScoreBoardEntry';
 
 class Scoreboard extends Component {
     currentPage
+    NEXT_PAGE_KEY
+    TEAM_DRIVER_SWAP_KEY
     constructor(props) {
         super(props);
 
-        this.currentPage = 0;
+        this.currentPage = -1;
+        this.NEXT_PAGE_KEY = 'Q'.charCodeAt(0);
+        this.TEAM_DRIVER_SWAP_KEY = 'W'.charCodeAt(0);
 
         this.state = {
-            pageEntries: this.props.content.leaderboard[0],
+            pageEntries: [],
             visState: ENTRY_VISUAL_STATE.DRIVER
         }
     }
 
     _handleKeyDown = (event) => {
-        if (event.keyCode === 81) {
+        if (event.keyCode === this.NEXT_PAGE_KEY) {
             let newPage = this.currentPage + 1;
             if (newPage === this.props.content.leaderboard.length) {
                 newPage = 0;
             }
 
             this._updateEntries(newPage);
-        } else if (event.keyCode === 87) {
+        } else if (event.keyCode === this.TEAM_DRIVER_SWAP_KEY) {
             if (this.state.visState === ENTRY_VISUAL_STATE.TEAM) {
                 this.setState({ visState: ENTRY_VISUAL_STATE.DRIVER });
             } else if (this.state.visState === ENTRY_VISUAL_STATE.DRIVER) {
