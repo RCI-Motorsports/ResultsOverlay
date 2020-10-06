@@ -110,7 +110,7 @@
 
 
 .item-enter {
-  transform: translate3d(2000px, 0, 0);
+  transform: translate3d(1800px, 0, 0);
 }
 .item-enter-active {
   transform: translate3d(0, 0, 0);
@@ -120,7 +120,7 @@
   transform: translate3d(0, 0, 0);
 }
 .item-exit-active {
-  transform: translate3d(-2000px, 0, 0);
+  transform: translate3d(-1800px, 0, 0);
   transition: transform 500ms ease-in;
 }
 
