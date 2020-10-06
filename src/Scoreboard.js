@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ScoreboardEntryList from './ScoreboardEntryList';
 import { ENTRY_VISUAL_STATE } from './enums';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import ScoreBoardEntry from './ScoreBoardEntry';
