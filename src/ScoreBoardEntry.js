@@ -22,10 +22,9 @@ class ScoreBoardEntry extends Component {
                 <div className='PositionCol'>{ this.props.entry.position }</div>
                 <div className='CarnumberCol'>{ this.props.entry.car.raceNumber }</div>
                 <div className='DriverCol'>{ text }</div>
-                <div className='CategoryCol'>PRO</div>
                 <div className='CarCol'>{ this.props.entry.carName }</div>
-                <div className='Column'>{ this.props.entry.timing.bestLapFormatted }</div>
-                <div className='Column'>{ this.props.entry.timing.timeDiffFormatted }</div>
+                <div className='TimeCol'>{ this.props.entry.timing.bestLapFormatted }</div>
+                <div className='TimeDiffCol'>{ this.props.entry.timing.timeDiffFormatted }</div>
             </div>
         );
     }

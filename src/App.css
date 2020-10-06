@@ -28,107 +28,80 @@
   color: #61dafb;
 }
 
-.div-0 {
-  background-color: #61dafb;
-}
-
-.div-1 {
-  background-color: #7a7a7a;
+.Scoreboard {
+  width: 1800px;
+  height: 900px;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .Row {
   margin:0 auto;
-  display: table;
-  width: 90%;
   height: 50px;
   table-layout: fixed;
-  border-spacing: 0px 2px;
+  padding-bottom: 10px;
   background-clip: border-box;
-}
-
-div.Scoreboard {
-  width: 1920;
-  height: 1080;
-}
-
-.Column {
-  height: 50px;
-  width: 10%;
-  margin:0 auto;
-  display: table-cell;
-  background-color: #000000; /*Optional*/
-  background: linear-gradient(0deg, rgba(17,17,17,1) 33%, rgba(34,34,34,1) 43%);
-  z-index: -100;
+  background-image: url("./img/5.png");
+  background-repeat: no-repeat;
 }
 
 .CarnumberCol {
-  width: 4.3%;
+  width: 60px;
   height: 50px;
-  margin:0 auto;
   display: table-cell;
-  color: #000000;
-  background-image: url("./img/2.png");
-  background-clip: border-box;
-  position: absolute;
-  left: 223px;
-  padding-right: 5px;
+  padding-left: 25px;
 }
 
 .PositionCol {
-  width: 5%;
+  width: 60px;
   height: 50px;
-  margin:0 auto;
   display: table-cell;
-  /*background-color: #6b6df3f8; /*Optional*/
-  background-image: url("./img/1.png");
-  background-clip: border-box;
-  position: absolute;
+  padding-left: 15px;
 }
 
 .DriverCol {
-  margin:0 auto;
+  width: 420px;
   display: table-cell;
-  background: linear-gradient(0deg, rgba(17,17,17,1) 33%, rgba(34,34,34,1) 43%);
-  position: absolute;
-  left: 313px;
-  z-index: -1;
-  width: 30%;
   height: 50px;
+  padding-left: 35px;
+  text-align: left;
 } 
 
 .CategoryCol {
-  width: 7.6%;
+  width: 5%;
   height: 50px;
-  margin:0 auto;
   display: table-cell;
-  color: #000000;
-  background-image: url("./img/3.png");
-  background-clip: border-box;
-  position: absolute;
-  left: 1050px;
-  padding-right: 5px;
 } 
 
 .CarCol {
-  margin:0 auto;
   display: table-cell;
-  background: linear-gradient(0deg, rgba(17,17,17,1) 33%, rgba(34,34,34,1) 43%);
-  position: absolute;
-  left: 1200px;
-  z-index: -1;
-  width: 30%;
+  width: 600px;
   height: 50px;
+  text-align: left;
+  padding-left: 21px;
 } 
 
+.TimeCol {
+  height: 50px;
+  width: 100px;
+  margin:0 auto;
+  display: table-cell;
+  padding-left: 21px;
+}
+
+.TimeDiffCol {
+  height: 50px;
+  width: 100px;
+  margin:0 auto;
+  display: table-cell;
+}
+
 .Title {
-  position: fixed;
   height:100px;
   top: 25px;
   left: 25%;
   margin:0 auto;
   background-color: #0e11da;
-  width: 50%;
-  vertical-align: middle;
   line-height: 100px;
 }
 .Subtitle {
@@ -142,34 +115,19 @@ div.Scoreboard {
   vertical-align: middle;
 }
 
-.Scoreboard {
-  position: fixed;
-  top: 300px;
-  margin:0 auto;
-  left: 0%;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .item-enter {
-  opacity: 0.01;
+  transform: translate3d(4000px, 0, 0);
 }
 .item-enter-active {
-  opacity: 1.0;
-  transition: opacity 400ms ease-in-out;
+  transform: translate3d(0, 0, 0);
+  transition: transform 400ms ease-in-out;
 }
 .item-exit {
-  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 .item-exit-active {
-  opacity: 0;
-  transition: opacity 400ms ease-in-out;
+  transform: translate3d(-4000px, 0, 0);
+  transition: transform 400ms ease-in-out;
 }
 

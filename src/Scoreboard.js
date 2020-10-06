@@ -57,7 +57,7 @@ class Scoreboard extends Component {
         if (entries.length > 0) {
             setTimeout(() => { this._removeEntry(onCleared) }, 100);
         } else {
-            setTimeout(() => { onCleared() }, 500);
+            setTimeout(() => { onCleared() }, 100);
         }
     }
 
@@ -96,6 +96,7 @@ class Scoreboard extends Component {
             <div className='Scoreboard'>
                 <div className='Title'>{this.props.title + " - " + this.props.content.track}</div>
                 <div className='Subtitle'>{this.props.content.session}</div>
+                <div />
                 <TransitionGroup>
                     {entries.map((entry, idx) => {
                         return (

@@ -19,7 +19,7 @@ class ScoreboardMenu extends Component {
 
     chunkLeaderboardLines = (lines) => {
         let retArray = [];
-        let i, j, chunk = 15;
+        let i, j, chunk = 10;
         for (i = 0; i < lines.length; i += chunk) {
             let tmp = lines.slice(i, i + chunk);
             retArray.push(tmp);
@@ -31,14 +31,30 @@ class ScoreboardMenu extends Component {
         return new Date(ms).toISOString().slice(14, -1);
     }
 
-    addPositionField = (lines) => {
-        let retArray = [];
-
+    addPositionField = (lines, isRace) => {
+        const firstPlaceLaps = lines[0].timing.lapCount;
+        const firstPlaceTime = lines[0].timing.totalTime;
+        const firstPlaceBestLap = lines[0].timing.bestLap;
+        
         return lines.map((line, idx) => {
-            line['position'] = idx+1;
+            line['position'] = idx + 1;
             line['carName'] = CarMapping[line.car.carModel];
-            line.timing['timeDiff'] = idx===0 ? 0 : lines[idx].timing.bestLap - lines[0].timing.bestLap;
-            line.timing['timeDiffFormatted'] = idx===0 ? '' : '+' + this.msToTime(line.timing.timeDiff);
+            line.timing['timeDiff'] = idx === 0 ? 0 : lines[idx].timing.bestLap - firstPlaceBestLap;
+
+            let timeDiffFormatted = '---';
+
+            if (isRace) {
+                if (line.timing.lapCount < firstPlaceLaps) {
+                    timeDiffFormatted = `+${firstPlaceLaps - line.timing.lapCount} laps`;
+                }
+                else {
+                    // calc total time
+                }
+            } else {
+                timeDiffFormatted = idx === 0 ? '' : '+' + this.msToTime(line.timing.timeDiff);
+            }
+
+            line.timing['timeDiffFormatted'] = timeDiffFormatted;
             line.timing['bestLapFormatted'] = this.msToTime(line.timing.bestLap);
             
             return line;
@@ -55,7 +71,10 @@ class ScoreboardMenu extends Component {
             'track': TrackMapping[resContent.trackName]
         };
         
-        const leaderBoardLinesWithPos = this.addPositionField(resContent.sessionResult.leaderBoardLines)
+        const leaderBoardLinesWithPos = this.addPositionField(
+            resContent.sessionResult.leaderBoardLines, 
+            resContent.sessionType === 'R'
+        );
         const leaderboardChunks = this.chunkLeaderboardLines(leaderBoardLinesWithPos);
         resultObj['leaderboard'] = leaderboardChunks;
 
