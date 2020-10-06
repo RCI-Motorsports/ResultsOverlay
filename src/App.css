@@ -9,14 +9,22 @@
 }
 
 .Scoreboard {
-  width: 1800px;
+  width: 1920px;
   height: 900px;
   display: inline-block;
   overflow: hidden;
 }
 
+.ScoreboardList {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 .Row {
-  margin:0 auto;
+  font-family: 'Segoe UI';
+  font-weight: 550;
+  margin-left: 50px;
+  margin-right: 50px;
   height: 50px;
   table-layout: fixed;
   padding-bottom: 10px;
@@ -30,6 +38,7 @@
   height: 50px;
   display: table-cell;
   padding-left: 25px;
+  text-align: center;
 }
 
 .PositionCol {
@@ -37,6 +46,7 @@
   height: 50px;
   display: table-cell;
   padding-left: 15px;
+  text-align: center;
 }
 
 .DriverCol {
@@ -63,7 +73,7 @@
 
 .TimeCol {
   height: 50px;
-  width: 100px;
+  width: 200px;
   margin:0 auto;
   display: table-cell;
   padding-left: 21px;
@@ -71,7 +81,7 @@
 
 .TimeDiffCol {
   height: 50px;
-  width: 100px;
+  width: 200px;
   margin:0 auto;
   display: table-cell;
 }
@@ -104,13 +114,13 @@
 }
 .item-enter-active {
   transform: translate3d(0, 0, 0);
-  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-out;
 }
 .item-exit {
   transform: translate3d(0, 0, 0);
 }
 .item-exit-active {
   transform: translate3d(-2000px, 0, 0);
-  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in;
 }
 

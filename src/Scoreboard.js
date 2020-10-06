@@ -57,11 +57,10 @@ class Scoreboard extends Component {
         if (entries.length > 0) {
             setTimeout(() => { this._removeEntry(onCleared) }, 100);
         } else {
-            setTimeout(() => { onCleared() }, 400);
+            setTimeout(() => { onCleared() }, 600);
         }
     }
 
-    
     _addEntries = async () => {
         const newEntries = [...this.props.content.leaderboard[this.currentPage]];
         for(const entry of newEntries) {
@@ -95,14 +94,13 @@ class Scoreboard extends Component {
         return (
             <div className='Scoreboard'>
                 <div className='Title'>{`${this.props.title} - ${this.props.content.track} - ${this.props.content.session}`}</div>
-                <div />
                 <TransitionGroup>
                     {entries.map((entry, idx) => {
                         return (
                             <CSSTransition
                                 key={`${entry.car.carId}-transition`}
                                 classNames="item"
-                                timeout={2000}
+                                timeout={2200}
                             >
                                 <ScoreBoardEntry key={entry.car.carId} entry={entry} visualstate={visState} style={idx % 2 === 0 ? 'div-entry-1' : 'div-entry-2'} />
                             </CSSTransition>

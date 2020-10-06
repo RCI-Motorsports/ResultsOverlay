@@ -39,18 +39,20 @@ class ScoreboardMenu extends Component {
         return lines.map((line, idx) => {
             line['position'] = idx + 1;
             line['carName'] = CarMapping[line.car.carModel];
-            line.timing['timeDiff'] = idx === 0 ? 0 : lines[idx].timing.bestLap - firstPlaceBestLap;
-
+            
             let timeDiffFormatted = '---';
 
             if (isRace) {
                 if (line.timing.lapCount < firstPlaceLaps) {
-                    timeDiffFormatted = `+${firstPlaceLaps - line.timing.lapCount} laps`;
+                    const lapCountDiff = firstPlaceLaps - line.timing.lapCount;
+                    timeDiffFormatted = `+${lapCountDiff} lap${lapCountDiff > 1 ? 's' : ''}`;
                 }
                 else {
-                    // calc total time
+                    line.timing['timeDiff'] = line.timing.totalTime - firstPlaceTime;
+                    timeDiffFormatted = idx === 0 ? '' : '+' + this.msToTime(line.timing.timeDiff);
                 }
             } else {
+                line.timing['timeDiff'] = idx === 0 ? 0 : lines[idx].timing.bestLap - firstPlaceBestLap;
                 timeDiffFormatted = idx === 0 ? '' : '+' + this.msToTime(line.timing.timeDiff);
             }
 
