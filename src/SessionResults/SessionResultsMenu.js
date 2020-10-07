@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Scoreboard from './Scoreboard';
-import TrackMapping from './track_name_mapping.json';
-import SessionMapping from './session_mapping.json';
-import CarMapping from './car_name_mapping.json';
+import TrackMapping from '../track_name_mapping.json';
+import SessionMapping from '../session_mapping.json';
+import CarMapping from '../car_name_mapping.json';
 
-class SessionResults extends Component {
+class SessionResultsMenu extends Component {
     intervalID;
     fReader;
     content;
@@ -111,4 +111,4 @@ class SessionResults extends Component {
     }
 }
 
-export default SessionResults;
+export default SessionResultsMenu;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import Leaderboard from './Leaderboard';
 import OptionsList from './OptionsList';
-import SessionResults from './SessionResults';
+import SessionResultsMenu from './SessionResults/SessionResultsMenu';
 
 const OPTIONS = {
     RESULT_JSON: 'result_json',
@@ -25,7 +25,7 @@ class Menu extends Component {
         if (this.state.activePage === "Leaderboard") {
             component = <Leaderboard />;
         } else if (this.state.activePage === OPTIONS.RESULT_JSON) {
-            component = <SessionResults />
+            component = <SessionResultsMenu />
         } else {
             component = <div className='MainMenu' id='MainMenu'>
                             <Button type='button' id={OPTIONS.RESULT_JSON} onClick={this.onClickedOption}>Results .json</Button>

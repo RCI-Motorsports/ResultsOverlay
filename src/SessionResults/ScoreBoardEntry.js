@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ENTRY_VISUAL_STATE } from './enums';
+import { ENTRY_VISUAL_STATE } from '../enums';
 
 
 
