@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { ENTRY_VISUAL_STATE } from '../enums';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import ScoreBoardEntry from './ScoreBoardEntry';
+import SessionResultEntry from './SessionResultEntry';
 
-class Scoreboard extends Component {
+class SessionResults extends Component {
     currentPage
     NEXT_PAGE_KEY
     TEAM_DRIVER_SWAP_KEY
@@ -95,7 +95,7 @@ class Scoreboard extends Component {
         const visState = this.state.visState;
 
         return (
-            <div className='Scoreboard'>
+            <div className='SessionResults'>
                 <div className='Title'>{`${this.props.title} - ${this.props.content.track} - ${this.props.content.session}`}</div>
                 <TransitionGroup>
                     {entries.map((entry, idx) => {
@@ -105,7 +105,7 @@ class Scoreboard extends Component {
                                 classNames="item"
                                 timeout={2200}
                             >
-                                <ScoreBoardEntry key={entry.car.carId} entry={entry} visualstate={visState} style={idx % 2 === 0 ? 'div-entry-1' : 'div-entry-2'} />
+                                <SessionResultEntry key={entry.car.carId} entry={entry} visualstate={visState} style={idx % 2 === 0 ? 'div-entry-1' : 'div-entry-2'} />
                             </CSSTransition>
                         )
                     })}
@@ -116,4 +116,4 @@ class Scoreboard extends Component {
     }
 }
 
-export default Scoreboard;
+export default SessionResults;

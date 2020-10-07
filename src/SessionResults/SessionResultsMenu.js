@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Scoreboard from './Scoreboard';
+import SessionResults from './SessionResults';
 import TrackMapping from '../track_name_mapping.json';
 import SessionMapping from '../session_mapping.json';
 import CarMapping from '../car_name_mapping.json';
@@ -103,8 +103,8 @@ class SessionResultsMenu extends Component {
             <div><button type="button" onClick={this.onUpload}>load</button></div>
         </div>;
         if (this.state.dataLoaded) {
-            component = <div className='Scoreboard'>
-                            <Scoreboard content={this.content} title={this.state.title}/>
+            component = <div className='SessionResults'>
+                            <SessionResults content={this.content} title={this.state.title}/>
                         </div>;
         }
         return component;

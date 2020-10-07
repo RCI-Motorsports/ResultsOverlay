@@ -3,7 +3,7 @@ import { ENTRY_VISUAL_STATE } from '../enums';
 
 
 
-class ScoreBoardEntry extends Component {
+class SessionResultEntry extends Component {
     constructor(props) {
         super(props);
     }
@@ -30,4 +30,4 @@ class ScoreBoardEntry extends Component {
     }
 }
 
-export default ScoreBoardEntry;
+export default SessionResultEntry;
