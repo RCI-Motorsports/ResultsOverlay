@@ -3,7 +3,7 @@ import { ENTRY_VISUAL_STATE } from '../enums';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import SessionResultEntry from './SessionResultEntry';
 
-class SessionResults extends Component {
+class SessionResultsPage extends Component {
     currentPage
     NEXT_PAGE_KEY
     TEAM_DRIVER_SWAP_KEY
@@ -95,7 +95,7 @@ class SessionResults extends Component {
         const visState = this.state.visState;
 
         return (
-            <div className='SessionResults'>
+            <div className='SessionResultsPage'>
                 <div className='Title'>{`${this.props.title} - ${this.props.content.track} - ${this.props.content.session}`}</div>
                 <TransitionGroup>
                     {entries.map((entry, idx) => {
@@ -116,4 +116,4 @@ class SessionResults extends Component {
     }
 }
 
-export default SessionResults;
+export default SessionResultsPage;
