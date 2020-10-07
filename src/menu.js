@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import Leaderboard from './Leaderboard';
 import OptionsList from './OptionsList';
-import SessionResultsMenu from './SessionResultsPage/SessionResultsMenu';
+import SessionResultsMenu from './SessionResults/SessionResultsMenu';
 
 const OPTIONS = {
     RESULT_JSON: 'result_json',
