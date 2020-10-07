@@ -18,7 +18,7 @@ class ScoreBoardEntry extends Component {
         }
 
         return (
-            <div key={ this.props.entry.car.carId } className='Row'>
+            <div key={ this.props.entry.car.carId } className='SessionResultRow'>
                 <div className='PositionCol'>{ this.props.entry.position }</div>
                 <div className='CarnumberCol'>{ this.props.entry.car.raceNumber }</div>
                 <div className='DriverCol'>{ text }</div>
