@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Leaderboard from './Leaderboard';
-import Button from 'react-bootstrap/Button';
 
 class OptionsList extends Component {
     allOptions = [/*"Leaderboard", */"From results .json"];

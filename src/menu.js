@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import Leaderboard from './Leaderboard';
 import OptionsList from './OptionsList';
 import SessionResultsMenu from './SessionResults/SessionResultsMenu';
 import ChampionshipStandingsPage from './Championship/ChampionshipStandingsMenu';
@@ -23,9 +22,7 @@ class Menu extends Component {
 
     render() {
         let component = <OptionsList onClickedOption={this.onClickedOption}/>;
-        if (this.state.activePage === "Leaderboard") {
-            component = <Leaderboard />;
-        } else if (this.state.activePage === OPTIONS.RESULT_JSON) {
+        if (this.state.activePage === OPTIONS.RESULT_JSON) {
             component = <SessionResultsMenu />
         } else if (this.state.activePage === OPTIONS.CHAMP_STANDINGS_JSON) {
             component = <ChampionshipStandingsPage />

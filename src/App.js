@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import Leaderboard from './Leaderboard';
 import './App.css';
 import Menu from './menu';
 
