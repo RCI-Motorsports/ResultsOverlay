@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import Leaderboard from './Leaderboard';
 import OptionsList from './OptionsList';
 import SessionResultsMenu from './SessionResults/SessionResultsMenu';
+import ChampionshipStandingsPage from './Championship/ChampionshipStandingsMenu';
 
 const OPTIONS = {
     RESULT_JSON: 'result_json',
@@ -26,10 +27,12 @@ class Menu extends Component {
             component = <Leaderboard />;
         } else if (this.state.activePage === OPTIONS.RESULT_JSON) {
             component = <SessionResultsMenu />
+        } else if (this.state.activePage === OPTIONS.CHAMP_STANDINGS_JSON) {
+            component = <ChampionshipStandingsPage />
         } else {
             component = <div className='MainMenu' id='MainMenu'>
                             <Button type='button' id={OPTIONS.RESULT_JSON} onClick={this.onClickedOption}>Results .json</Button>
-                            <Button type='button' id={OPTIONS.CHAMP_STANDINGS_JSON} onClick={this.onClickedOption}>Championship standings json</Button>
+                            <Button type='button' id={OPTIONS.CHAMP_STANDINGS_JSON} onClick={this.onClickedOption}>Championship standings .csv</Button>
                         </div>;
         }
 

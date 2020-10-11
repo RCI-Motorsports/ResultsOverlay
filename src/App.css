@@ -33,7 +33,7 @@
   margin-right: 50px;
 }
 
-.SessionResultRow {
+.Row {
   font-family: 'Segoe UI';
   font-weight: 550;
   margin-left: 50px;
@@ -42,6 +42,9 @@
   table-layout: fixed;
   padding-bottom: 10px;
   background-clip: border-box;
+}
+
+.SessionResultRow {
   background-image: url("./img/5.png");
   background-repeat: no-repeat;
 }
@@ -60,6 +63,98 @@
   display: table-cell;
   padding-left: 15px;
   text-align: center;
+}
+
+.ChampionshipStandingsPositionCol {
+  width: 80px;
+  height: 50px;
+  display: table-cell;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.ChampionshipStandingsCarNumCol {
+  width: 100px;
+  height: 50px;
+  display: table-cell;
+  padding-left: 25px;
+  text-align: center;
+}
+
+.ChampionshipStandingsNameCol {
+  width: 600px;
+  height: 50px;
+  display: table-cell;
+  padding-left: 35px;
+  text-align: left;
+}
+
+.ChampionshipStandingsCarCol {
+  width: 560px;
+  height: 50px;
+  display: table-cell;
+  padding-left: 35px;
+  text-align: left;
+}
+
+.ChampionshipStandingsPointsCol {
+  width: 100px;
+  height: 50px;
+  display: table-cell;
+  padding-left: 30px;
+  text-align: center;
+  color: black;
+}
+
+.PRO {
+  color: black;
+}
+
+.SILVER {
+  color: white;
+}
+
+.AM {
+  color: black;
+}
+
+.ROOKIE {
+  color: white;
+}
+
+.ChampionshipStandingsRow,
+.ChampionshipStandingsRow-PRO,
+.ChampionshipStandingsRow-SILVER,
+.ChampionshipStandingsRow-AM,
+.ChampionshipStandingsRow-ROOKIE {
+  margin-left: 161px;
+  width: 1598px;
+  background-repeat: no-repeat;
+}
+
+.ChampionshipStandingsRow-PRO {
+  background-image: url("./img/Champ_Standings_Slide_PRO.svg");
+}
+
+.ChampionshipStandingsRow-SILVER {
+  background-image: url("./img/Champ_Standings_Slide_SILVER.svg");
+}
+
+.ChampionshipStandingsRow-AM {
+  background-image: url("./img/Champ_Standings_Slide_AM.svg");
+}
+
+.ChampionshipStandingsRow-ROOKIE {
+  background-image: url("./img/Champ_Standings_Slide_ROOKIE.svg");
+}
+
+.ChampionshipStandingsTitle {
+  width: 1437px;
+  font-family: 'Segoe UI';
+  font-weight: 550;
+  height: 50px;
+  background-image: url("./img/Standing_Title.svg");
+  background-repeat: no-repeat;
 }
 
 .DriverCol {
@@ -99,14 +194,13 @@
   display: table-cell;
 }
 
-.Title {
+.Title,
+.ChampionshipStandingsTitle {
   text-align: center;
   height:100px;
   top: 25px;
   left: 25%;
   margin:0 auto;
-  background-color: #0e11da;
-  line-height: 100px;
   margin-top: 100px;
   margin-bottom: 100px;
 }
