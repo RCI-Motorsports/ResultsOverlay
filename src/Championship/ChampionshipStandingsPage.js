@@ -36,6 +36,7 @@ class ChampionshipStandingsPage extends Component {
 
                 if (newCategoryIndex === this.props.content.length) {
                     newCategoryIndex = 0;
+                    newPage = -1;
                 }
             }
 
@@ -79,10 +80,13 @@ class ChampionshipStandingsPage extends Component {
     }
 
     _addEntries = async () => {
-        this.currentTitle = `${this.props.title} - ${this.props.content[this.currentCategoryIndex].name}`;
-        const newEntries = [...this.props.content[this.currentCategoryIndex].lines[this.currentPage]];
-        for(const entry of newEntries) {
-            await this._addEntry(entry);
+        const categoryName = this.props.content[this.currentCategoryIndex].name;
+        this.currentTitle = `${this.props.title} - ${categoryName ? categoryName : ''}`;
+        if (this.props.content[this.currentCategoryIndex].lines[this.currentPage]) {
+            const newEntries = [...this.props.content[this.currentCategoryIndex].lines[this.currentPage]];
+            for(const entry of newEntries) {
+                await this._addEntry(entry);
+            }
         }
     }
 
