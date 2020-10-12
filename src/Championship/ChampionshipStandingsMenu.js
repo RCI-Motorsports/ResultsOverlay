@@ -41,7 +41,9 @@ class ChampionshipStandingsMenu extends Component {
 
         let csvArray = CSVToArray(content, ',');
         csvArray.shift();
-        csvArray = csvArray.map((entry, idx) => {
+        csvArray = csvArray.filter(entry=> {
+            return entry[COLUMN_MAPPING.name] !== '';
+        }).map((entry, idx) => {
             return {
                 carNumber: entry[COLUMN_MAPPING.car_num],
                 class: entry[COLUMN_MAPPING.class],
