@@ -47,7 +47,6 @@ class ChampionshipStandingsMenu extends Component {
             return {
                 carNumber: entry[COLUMN_MAPPING.car_num],
                 class: entry[COLUMN_MAPPING.class],
-                position: entry[COLUMN_MAPPING.position],
                 name: entry[COLUMN_MAPPING.name],
                 car: entry[COLUMN_MAPPING.car],
                 points: entry[COLUMN_MAPPING.points],
@@ -73,8 +72,25 @@ class ChampionshipStandingsMenu extends Component {
 
 
         const namedPages = Object.keys(categorizedLines).map(key => {
-            const category = categorizedLines[key];
+            let category = categorizedLines[key];
             const pages = [];
+            
+            category = category.sort((a, b) => {
+                const aPoints = parseInt(a.points, 10);
+                const bPoints = parseInt(b.points, 10);
+                if (aPoints > bPoints) {
+                    return -1;
+                }
+                if (aPoints < bPoints) {
+                    return 1;
+                }
+                return 0;
+            }).map((entry, idx) => {
+                return {
+                    ...entry,
+                    position: `${idx+1}`
+                }
+            });
 
             let i;
             for (i = 0; i < category.length; i += linesPerPage) {
