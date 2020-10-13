@@ -107,7 +107,7 @@ class ChampionshipStandingsMenu extends Component {
             if (aIndex < bIndex) {
                 return -1;
             }
-            if (aIndex < bIndex) {
+            if (aIndex > bIndex) {
                 return 1;
             }  
             return 0;
