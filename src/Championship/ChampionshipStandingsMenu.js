@@ -51,7 +51,7 @@ class ChampionshipStandingsMenu extends Component {
                 car: entry[COLUMN_MAPPING.car],
                 points: entry[COLUMN_MAPPING.points],
                 id: idx,
-                category: entry[COLUMN_MAPPING.category]
+                category: entry[COLUMN_MAPPING.category].toUpperCase()
             }
         })
 
