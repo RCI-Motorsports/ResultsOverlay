@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { ENTRY_VISUAL_STATE } from '../enums';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import ChampionshipStandingsEntry from './ChampionshipStandingsEntry';
 
-class ChampionshipStandingsPage extends Component {
+class OverlayPage extends Component {
 
     currentPage
     currentCategoryIndex
@@ -18,7 +17,6 @@ class ChampionshipStandingsPage extends Component {
         this.currentTitle = this.props.title;
         this.NEXT_PAGE_KEY = 'Q'.charCodeAt(0);
         this.TEAM_DRIVER_SWAP_KEY = 'W'.charCodeAt(0);
-        this.entryClass = ChampionshipStandingsEntry;
         
 
         this.state = {
@@ -112,19 +110,18 @@ class ChampionshipStandingsPage extends Component {
 
     render() {
         const entries = this.state.pageEntries;
-
         return (
-            <div className='SessionResultsPage'>
-                <div className='ChampionshipStandingsTitle'>{this.props.title}</div>
+            <div className='OverlayPage'>
+                <div className='Title'>{this.props.title}</div>
                 <TransitionGroup>
-                    {entries.map((entry, idx) => {
+                    {entries.map((entry) => {
                         return (
                             <CSSTransition
                                 key={`${entry.id}-transition`}
                                 classNames="item"
                                 timeout={2200}
                             >
-                                <this.entryClass key={`${entry.id}-entry`} entry={entry}/>
+                                <this.props.entryClass key={`${entry.id}-entry`} entry={entry}/>
                             </CSSTransition>
                         )
                     })}
@@ -135,4 +132,4 @@ class ChampionshipStandingsPage extends Component {
     }
 };
 
-export default ChampionshipStandingsPage;
+export default OverlayPage;

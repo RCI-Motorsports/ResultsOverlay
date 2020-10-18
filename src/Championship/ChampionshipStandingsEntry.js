@@ -13,7 +13,7 @@ class ChampionshipStandingsEntry extends Component {
                 <div className={`ChampionshipStandingsCarNumCol ${this.props.entry.category}`}>{ this.props.entry.carNumber }</div>
                 <div className='ChampionshipStandingsNameCol'>{ this.props.entry.name }</div>
                 <div className='ChampionshipStandingsCarCol'>{ this.props.entry.car }</div>
-                <div className='ChampionshipStandingsPointsCol'>{ this.props.entry.points }</div>
+                <div className='ChampionshipStandingsPointsCol'>{ this.props.entry.championshipStandings.points }</div>
             </div>
         );
     }
