@@ -22,7 +22,7 @@ class OverlayPage extends Component {
         this.state = {
             pageEntries: [],
             visState: ENTRY_VISUAL_STATE.DRIVER,
-            staticTitle: this.props.content[this.currentCategoryIndex].name
+            staticTitle: ''
         }
     }
 
@@ -37,14 +37,20 @@ class OverlayPage extends Component {
                 if (newCategoryIndex === this.props.content.length) {
                     newCategoryIndex = 0;
                     newPage = -1;
-                }
-
-                if (this.props.content[newCategoryIndex]) {
-                    await this._updateTitle(this.props.content[newCategoryIndex].name);
-                }
+                } 
             }
 
-            this._updateEntries(newPage, newCategoryIndex);
+            if (this.props.content[newCategoryIndex] &&
+                this.props.content[newCategoryIndex].name !== this.state.staticTitle &&
+                newPage !== -1) {
+                await this._updateTitle(this.props.content[newCategoryIndex].name);
+            }
+
+            await this._updateEntries(newPage, newCategoryIndex);
+
+            if (newPage === -1) {
+                await this._updateTitle('');
+            }
         }
         // } else if (event.keyCode === this.TEAM_DRIVER_SWAP_KEY) {
         //     if (this.state.visState === ENTRY_VISUAL_STATE.TEAM) {
