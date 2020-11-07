@@ -149,41 +149,86 @@
   background-image: url("./img/Champ_Standings_Slide_ROOKIE.svg");
 }
 
-.DriverCol {
-  width: 420px;
+/* Session results stuff */
+
+.SessionResultsRow,
+.SessionResultsRow-PRO,
+.SessionResultsRow-SILVER,
+.SessionResultsRow-AM,
+.SessionResultsRow-ROOKIE {
+  margin-left: 76px;
+  width: 1768px;
+  background-repeat: no-repeat;
+}
+
+.SessionResultsRow-PRO {
+  background-image: url("./img/Session_Results_Slide_PRO.svg");
+}
+
+.SessionResultsRow-SILVER {
+  background-image: url("./img/Session_Results_Slide_SILVER.svg");
+}
+
+.SessionResultsRow-AM {
+  background-image: url("./img/Session_Results_Slide_AM.svg");
+}
+
+.SessionResultsRow-ROOKIE {
+  background-image: url("./img/Session_Results_Slide_ROOKIE.svg");
+}
+
+.SessionResultPositionCol {
+  width: 70px;
+  height: 50px;
+  display: table-cell;
+  padding-left: 25px;
+  text-align: center;
+  vertical-align: middle;
+} 
+
+.SessionResultCarNumberCol {
+  width: 100px;
+  height: 50px;
+  display: table-cell;
+  padding-left: 25px;
+  text-align: center;
+  vertical-align: middle;
+} 
+
+.SessionResultDriverCol {
+  width: 590px;
   display: table-cell;
   height: 50px;
   padding-left: 35px;
   text-align: left;
+  vertical-align: middle;
 } 
 
-.CategoryCol {
-  width: 5%;
-  height: 50px;
+.SessionResultCarCol {
   display: table-cell;
-} 
-
-.CarCol {
-  display: table-cell;
-  width: 600px;
+  width: 560px;
   height: 50px;
   text-align: left;
-  padding-left: 21px;
+  padding-left: 37px;
+  vertical-align: middle;
 } 
 
-.TimeCol {
+.SessionResultTimeCol {
   height: 50px;
-  width: 200px;
-  margin:0 auto;
+  width: 135px;
   display: table-cell;
-  padding-left: 21px;
+  text-align: center;
+  padding-left: 35px;
+  vertical-align: middle;
 }
 
-.TimeDiffCol {
+.SessionResultTimeDiffCol {
   height: 50px;
-  width: 200px;
-  margin:0 auto;
+  width: 125px;
   display: table-cell;
+  vertical-align: middle;
+  color: black;
+  padding-left: 35px;
 }
 
 .Title,
@@ -213,19 +258,37 @@
   vertical-align: middle;
 }
 
+.test {
+  height: 100px;
+  table-layout: fixed;
+}
+
 
 .item-enter {
-  transform: translate3d(1800px, 0, 0);
+  -webkit-transform: translateX(100%);
+  transform: translate3d(1920px, 0, 0);
+  will-change: transform;
 }
 .item-enter-active {
+  -webkit-transform: translateX(0%);
   transform: translate3d(0, 0, 0);
+  will-change: transform;
   transition: transform 500ms ease-out;
 }
 .item-exit {
+  -webkit-transform: translateX(0%);
   transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 .item-exit-active {
-  transform: translate3d(-1800px, 0, 0);
+  -webkit-transform: translateX(-100%);
+  transform: translate3d(-1920px, 0, 0);
+  will-change: transform;
   transition: transform 500ms ease-in;
+}
+
+body::after{
+  position:absolute; width:0; height:0; overflow:hidden; z-index:-1; 
+  content:url(./img/Standing_Title.svg) url(./img/Session_Results_Slide_PRO.svg) url(./img/Session_Results_Slide_SILVER.svg) url(./img/Session_Results_Slide_AM.svg) url(./img/Session_Results_Slide_ROOKIE.svg) url(./img/Champ_Standings_Slide_PRO.svg) url(./img/Champ_Standings_Slide_SILVER.svg) url(./img/Champ_Standings_Slide_AM.svg) url(./img/Champ_Standings_Slide_ROOKIE.svg);   
 }
 

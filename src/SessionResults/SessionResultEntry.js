@@ -6,6 +6,30 @@ class SessionResultEntry extends Component {
         super(props);
     }
 
+    sizeForDeficitLength = () => {
+        if (this.props.entry.timing.deficit.length >= 9) {
+            return 21;
+        } else if (this.props.entry.timing.deficit.length === 8) {
+            return 24;
+        } else if (this.props.entry.timing.deficit.length === 7) {
+            return 27;
+        } else if (this.props.entry.timing.deficit.length <= 6) {
+            return 30;
+        }   
+    }
+
+    sizeForTimeLength = () => {
+        if (this.props.entry.timing.bestLap.length >= 9) {
+            return 27;
+        } else if (this.props.entry.timing.bestLap.length === 8) {
+            return 30;
+        } else if (this.props.entry.timing.bestLap.length === 7) {
+            return 33;
+        } else if (this.props.entry.timing.bestLap.length <= 6) {
+            return 36;
+        }   
+    }
+
     render() {
         
         let text = "";
@@ -16,13 +40,13 @@ class SessionResultEntry extends Component {
         }
 
         return (
-            <div key={ this.props.entry.car.carId } className='Row SessionResultRow'>
-                <div className='PositionCol'>{ this.props.entry.position }</div>
-                <div className='CarnumberCol'>{ this.props.entry.carNumber }</div>
-                <div className='DriverCol'>{ text }</div>
-                <div className='CarCol'>{ this.props.entry.car }</div>
-                <div className='TimeCol'>{ this.props.entry.timing.bestLap }</div>
-                <div className='TimeDiffCol'>{ this.props.entry.timing.deficit }</div>
+            <div key={ this.props.entry.car.carId } className={`Row SessionResultsRow-${this.props.entry.category}`}>
+                <div className='SessionResultPositionCol'>{ this.props.entry.position }</div>
+                <div className={`SessionResultCarNumberCol ${this.props.entry.category}`}>{ this.props.entry.carNumber }</div>
+                <div className='SessionResultDriverCol'>{ text }</div>
+                <div className='SessionResultCarCol'>{ this.props.entry.car }</div>
+                <div className='SessionResultTimeCol' style={{fontSize: this.sizeForTimeLength()}}>{ this.props.entry.timing.bestLap }</div>
+                <div className='SessionResultTimeDiffCol' style={{fontSize: this.sizeForDeficitLength()}}>{ this.props.entry.timing.deficit }</div>
             </div>
         );
     }

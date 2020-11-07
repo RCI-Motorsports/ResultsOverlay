@@ -96,7 +96,19 @@ const _getEntryName = (line, teamNameMapping) => {
 };
 
 const _msToTime = (ms) => {
-    return new Date(ms).toISOString().slice(14, -1);
+    let msString = '';
+    if (ms > 60000) {
+        msString = new Date(ms).toISOString().slice(14, -1);
+    }
+    else {
+        msString = new Date(ms).toISOString().slice(17, -1);
+    }
+
+    if (msString[0] === '0') {
+        msString = msString.slice(1);
+    }
+
+    return msString
 }
 
 const _categorizeEntryObjects = (entries) => {
@@ -201,10 +213,10 @@ export const ParseSessionResultJSON = (jsonData, teamNameMapping = undefined) =>
                 return `+${lapCountDiff} lap${lapCountDiff > 1 ? 's' : ''}`;
             }
             else {
-                return idx === 0 ? '' : `+ ${_msToTime(timing.totalTime - firstPlaceTime)}`;
+                return idx === 0 ? '' : `+${_msToTime(timing.totalTime - firstPlaceTime)}`;
             }
         } else {
-            return idx === 0 ? '' : `+ ${_msToTime(timing.bestLap - firstPlaceBestLap)}`;
+            return idx === 0 ? '' : `+${_msToTime(timing.bestLap - firstPlaceBestLap)}`;
         }
     };
 
