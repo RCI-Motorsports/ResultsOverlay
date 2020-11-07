@@ -265,17 +265,30 @@
 
 
 .item-enter {
+  -webkit-transform: translateX(100%);
   transform: translate3d(1920px, 0, 0);
+  will-change: transform;
 }
 .item-enter-active {
+  -webkit-transform: translateX(0%);
   transform: translate3d(0, 0, 0);
+  will-change: transform;
   transition: transform 500ms ease-out;
 }
 .item-exit {
+  -webkit-transform: translateX(0%);
   transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 .item-exit-active {
+  -webkit-transform: translateX(-100%);
   transform: translate3d(-1920px, 0, 0);
+  will-change: transform;
   transition: transform 500ms ease-in;
+}
+
+body::after{
+  position:absolute; width:0; height:0; overflow:hidden; z-index:-1; 
+  content:url(./img/Standing_Title.svg) url(./img/Session_Results_Slide_PRO.svg) url(./img/Session_Results_Slide_SILVER.svg) url(./img/Session_Results_Slide_AM.svg) url(./img/Session_Results_Slide_ROOKIE.svg) url(./img/Champ_Standings_Slide_PRO.svg) url(./img/Champ_Standings_Slide_SILVER.svg) url(./img/Champ_Standings_Slide_AM.svg) url(./img/Champ_Standings_Slide_ROOKIE.svg);   
 }
 
