@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1774 50" style="enable-background:new 0 0 1774 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F2F2F2;}
+	.st1{fill:#1A1A1A;}
+	.st2{fill:#0071BC;}
+	.st3{opacity:0.25;}
+</style>
+<g>
+	<polygon id="NUM" class="st0" points="220.1,50 94.1,50 119.1,0 245.1,0 	"/>
+	<rect x="340.1" y="0" class="st1" width="560" height="50"/>
+	<rect x="900.1" y="0" class="st1" width="755" height="50"/>
+	<polygon id="_Rectangle_" class="st1" points="353.1,50 227.1,50 252.1,0 378.1,0 	"/>
+	<path id="PTS" class="st0" d="M1655.1,0h108.8c5.5,0,10,4.5,10,10c0,1.5-0.4,3-1,4.4l-15,30c-1.7,3.4-5.1,5.5-8.9,5.5h-118.8
+		L1655.1,0z"/>
+	<path id="POS" class="st2" d="M94.1,50h-84C4.5,50,0,45.6,0,40.1c0-1.6,0.4-3.1,1.1-4.5l15-30c1.7-3.4,5.2-5.6,9-5.5h94L94.1,50z"
+		/>
+	<polygon class="st2" points="1655.1,0 1645.1,0 1620.1,50 1630.1,50 	"/>
+	<polygon class="st2" points="1479.1,0 1469.1,0 1444.1,50 1454.1,50 	"/>
+	<polygon class="st2" points="884.1,0 874.1,0 849.1,50 859.1,50 	"/>
+	<polygon class="st2" points="254.1,0 244.1,0 219.1,50 229.1,50 	"/>
+</g>
+<g class="st3">
+	<g>
+		<path d="M6.3,25L1.1,35.5c-0.7,1.4-1.1,3-1.1,4.5c0,5.5,4.5,10,10.1,9.9h84l12.5-25H6.3z M106.6,25L94.1,50h1654.8
+			c3.8,0,7.2-2.2,8.9-5.5l9.7-19.4H106.6z"/>
+	</g>
+</g>
+</svg>
