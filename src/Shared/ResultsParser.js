@@ -126,17 +126,7 @@ const _categorizeEntryObjects = (entries) => {
         let category = categorizedLines[key];
         const pages = [];
 
-        category = category.sort((a, b) => {
-            const aPoints = parseInt(a.points, 10);
-            const bPoints = parseInt(b.points, 10);
-            if (aPoints > bPoints) {
-                return -1;
-            }
-            if (aPoints < bPoints) {
-                return 1;
-            }
-            return 0;
-        }).map((entry, idx) => {
+        category = category.map((entry, idx) => {
             return {
                 ...entry,
                 position: `${idx + 1}`
@@ -189,10 +179,18 @@ export const ParseChampionshipResultsCSV = (csvData) => {
             car: entry[COLUMN_MAPPING.car],
             category: entry[COLUMN_MAPPING.category].toUpperCase(),
             championshipStandings: {
-                points: entry[COLUMN_MAPPING.points],
+                points: parseInt(entry[COLUMN_MAPPING.points], 10),
                 deficit: 0
             }
         }
+    }).sort((a, b) => {
+        if (a.championshipStandings.points > b.championshipStandings.points) {
+            return -1;
+        }
+        if (a.championshipStandings.points < b.championshipStandings.points) {
+            return 1;
+        }
+        return 0;
     });
     
     return _categorizeEntryObjects(entries);
