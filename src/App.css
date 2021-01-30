@@ -36,8 +36,9 @@
 
 .Row {
   font-family: 'Segoe UI';
+  line-height: 47px;
   font-weight: 550;
-  margin-left: 50px;
+  margin-left: 150px;
   margin-right: 50px;
   height: 50px;
   table-layout: fixed;
@@ -67,44 +68,74 @@
 }
 
 .ChampionshipStandingsPositionCol {
-  width: 80px;
+  width: 100px;
   height: 50px;
   display: table-cell;
-  padding-left: 15px;
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100px 50px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  font-weight: 650;
 }
 
 .ChampionshipStandingsCarNumCol {
-  width: 100px;
+  width: 113px;
   height: 50px;
   display: table-cell;
-  padding-left: 25px;
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: 113px 50px;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.ChampionshipStandingsFlagCol {
+  width: 120px;
+  height: 50px;
+  display: table-cell;
+  text-align: center;
+  background-position-x: center, center;
+  background-repeat: no-repeat, repeat;
+  background-size: contain, 105px, 50px;
 }
 
 .ChampionshipStandingsNameCol {
-  width: 600px;
-  height: 50px;
-  display: table-cell;
-  padding-left: 35px;
-  text-align: left;
-}
-
-.ChampionshipStandingsCarCol {
   width: 560px;
   height: 50px;
   display: table-cell;
-  padding-left: 35px;
+  padding-left: 10px;
   text-align: left;
+  background-image: url("./img/col4.png");
+  background-repeat: no-repeat;
+  background-size: 560px 50px;
+  box-sizing: border-box;
 }
 
-.ChampionshipStandingsPointsCol {
-  width: 100px;
+.ChampionshipStandingsCarCol {
+  width: 590px;
   height: 50px;
   display: table-cell;
   padding-left: 30px;
+  text-align: left;
+  background-image: url("./img/col5.png");
+  background-repeat: no-repeat;
+  background-size: 590px 50px;
+  box-sizing: border-box;
+}
+
+.ChampionshipStandingsPointsCol {
+  width: 143px;
+  height: 50px;
+  display: table-cell;
   text-align: center;
   color: black;
+  background-image: url("./img/col6.png");
+  background-repeat: no-repeat;
+  background-size: 143px 50px;
+  box-sizing: border-box;
+  padding-right: 10px;  
+  font-weight: 650;
 }
 
 .PRO {
@@ -240,11 +271,12 @@
   margin:0 auto;
   margin-top: 100px;
   margin-bottom: 100px;
-  width: 1437px;
+  width: 1025px;
   font-family: 'Segoe UI';
   font-weight: 550;
+  line-height: 47px;
   height: 50px;
-  background-image: url("./img/Standing_Title.svg");
+  background-image: url("./img/Title_Slide.svg");
   background-repeat: no-repeat;
 }
 .Subtitle {
