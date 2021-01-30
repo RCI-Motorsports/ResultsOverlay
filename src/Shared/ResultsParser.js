@@ -164,6 +164,7 @@ export const ParseChampionshipResultsCSV = (csvData) => {
         name: 4,
         car: 5,
         points: 6,
+        country: 7
     };
 
     let csvArray = CSVToArray(csvData, ',');
@@ -171,6 +172,13 @@ export const ParseChampionshipResultsCSV = (csvData) => {
     const entries = csvArray.filter(entry => {
         return entry[COLUMN_MAPPING.name] !== '';
     }).map((entry, idx) => {
+        let country = entry[COLUMN_MAPPING.country]
+        if (country) {
+            country = country.replace(/\&/m, 'And').replace(/\s/m, '');
+        } else {
+            country = 'International';
+        }
+        
         return {
             id: idx,
             carNumber: entry[COLUMN_MAPPING.car_num],
@@ -181,7 +189,8 @@ export const ParseChampionshipResultsCSV = (csvData) => {
             championshipStandings: {
                 points: parseInt(entry[COLUMN_MAPPING.points], 10),
                 deficit: 0
-            }
+            },
+            country
         }
     }).sort((a, b) => {
         if (a.championshipStandings.points > b.championshipStandings.points) {
@@ -231,8 +240,8 @@ export const ParseSessionResultJSON = (jsonData, teamNameMapping = undefined) =>
             timing: {
                 bestLap: _msToTime(line.timing.bestLap),
                 deficit: _calculateTimeDeficit(line.timing, isRace, idx)
-            }
-            
+            },
+            country: ''
         }
     });
 
