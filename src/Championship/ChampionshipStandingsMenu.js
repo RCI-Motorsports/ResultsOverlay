@@ -38,7 +38,7 @@ class ChampionshipStandingsMenu extends Component {
     render() {
         let component =
             <div className='MainMenu'>
-                <div><input type="text" placeholder='Title..' onChange={this.handleChange} /></div>
+                <div><input type="text" placeholder='Title..' onChange={this.handleChange} style={{width: '500px'}}/></div>
                 <div><input type="file" ref={this.fileInput} /></div>
                 <div><button type="button" onClick={this.onUpload}>load</button></div>
             </div>;
