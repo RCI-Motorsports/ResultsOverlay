@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ResultsOverlay/static/css/main.fe42a622.chunk.css",
+    "main.css": "/ResultsOverlay/static/css/main.824241ef.chunk.css",
     "main.js": "/ResultsOverlay/static/js/main.06b8338c.chunk.js",
     "main.js.map": "/ResultsOverlay/static/js/main.06b8338c.chunk.js.map",
     "runtime-main.js": "/ResultsOverlay/static/js/runtime-main.dfcb15a1.js",
@@ -8,9 +8,9 @@
     "static/js/2.bdf72bcb.chunk.js": "/ResultsOverlay/static/js/2.bdf72bcb.chunk.js",
     "static/js/2.bdf72bcb.chunk.js.map": "/ResultsOverlay/static/js/2.bdf72bcb.chunk.js.map",
     "index.html": "/ResultsOverlay/index.html",
-    "precache-manifest.b8133651fd564a703e6356fccd60b2b4.js": "/ResultsOverlay/precache-manifest.b8133651fd564a703e6356fccd60b2b4.js",
+    "precache-manifest.92ee529ef0257bcb728b5747d38e3f09.js": "/ResultsOverlay/precache-manifest.92ee529ef0257bcb728b5747d38e3f09.js",
     "service-worker.js": "/ResultsOverlay/service-worker.js",
-    "static/css/main.fe42a622.chunk.css.map": "/ResultsOverlay/static/css/main.fe42a622.chunk.css.map",
+    "static/css/main.824241ef.chunk.css.map": "/ResultsOverlay/static/css/main.824241ef.chunk.css.map",
     "static/js/2.bdf72bcb.chunk.js.LICENSE.txt": "/ResultsOverlay/static/js/2.bdf72bcb.chunk.js.LICENSE.txt",
     "static/media/Afghanistan.png": "/ResultsOverlay/static/media/Afghanistan.4127c188.png",
     "static/media/Andorra.png": "/ResultsOverlay/static/media/Andorra.5f759880.png",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.dfcb15a1.js",
     "static/js/2.bdf72bcb.chunk.js",
-    "static/css/main.fe42a622.chunk.css",
+    "static/css/main.824241ef.chunk.css",
     "static/js/main.06b8338c.chunk.js"
   ]
 }
