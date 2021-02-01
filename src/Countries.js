@@ -88,7 +88,7 @@ import Ukraine from "./img/countries/Ukraine.png";
 import UnitedArabEmirates from "./img/countries/United Arab Emirates.png";
 import UnitedKingdom from "./img/countries/United Kingdom.png";
 import Uruguay from "./img/countries/Uruguay.png";
-import USA from "./img/countries/USA.png";
+import UnitedStates from "./img/countries/United States.png";
 import Venezuela from "./img/countries/Venezuela.png";
 import Wales from "./img/countries/Wales.png";
 import Zimbabwe from "./img/countries/Zimbabwe.png";
@@ -183,7 +183,7 @@ export default { Afghanistan,
     UnitedArabEmirates,
     UnitedKingdom,
     Uruguay,
-    USA,
+    UnitedStates,
     Venezuela,
     Wales,
     Zimbabwe 
