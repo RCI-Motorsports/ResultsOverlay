@@ -1,5 +1,5 @@
 .App-header {
-  background-color: #FF00FF;
+  background-color: 'transparent';
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -269,8 +269,8 @@
   top: 25px;
   left: 25%;
   margin:0 auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 77px;
+  margin-bottom: 123px;
   width: 1025px;
   font-family: 'Segoe UI';
   font-weight: 550;
