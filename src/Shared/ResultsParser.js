@@ -1,5 +1,6 @@
 import CarMapping from '../car_name_mapping.json';
 import CSVToArray from '../util';
+import Countries from "../Countries";
 
 /**
  * All of these methods should return data in this format:
@@ -172,10 +173,9 @@ export const ParseChampionshipResultsCSV = (csvData) => {
     const entries = csvArray.filter(entry => {
         return entry[COLUMN_MAPPING.name] !== '';
     }).map((entry, idx) => {
-        let country = entry[COLUMN_MAPPING.country]
-        if (country) {
-            country = country.replace(/\&/m, 'And').replace(/\s/m, '');
-        } else {
+        let country = entry[COLUMN_MAPPING.country];
+        country = country.replace(/\&/m, 'And').replace(/\s/m, '');
+        if (!Countries[country]) {
             country = 'International';
         }
         
