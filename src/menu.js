@@ -28,7 +28,6 @@ class Menu extends Component {
             component = <ChampionshipStandingsMenu />
         } else {
             component = <div className='MainMenu' id='MainMenu'>
-                            <Button type='button' id={OPTIONS.RESULT_JSON} onClick={this.onClickedOption}>Results .json</Button>
                             <Button type='button' id={OPTIONS.CHAMP_STANDINGS_JSON} onClick={this.onClickedOption}>Championship standings .csv</Button>
                         </div>;
         }
