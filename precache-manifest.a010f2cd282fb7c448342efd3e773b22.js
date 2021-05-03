@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "53399196c8bc676abd6c8d7373ad1434",
+    "revision": "7ab2b4a135a24b392c9f4b7e2fb5be6e",
     "url": "/ResultsOverlay/index.html"
   },
   {
-    "revision": "1a24f1f29f6964f81513",
-    "url": "/ResultsOverlay/static/css/main.f0e14b11.chunk.css"
+    "revision": "ad3d7826843d702d15d1",
+    "url": "/ResultsOverlay/static/css/main.a18b1ab7.chunk.css"
   },
   {
-    "revision": "57ffbf472b1141a4ef8a",
-    "url": "/ResultsOverlay/static/js/2.bdf72bcb.chunk.js"
+    "revision": "3930344661c84a49db91",
+    "url": "/ResultsOverlay/static/js/2.36c381da.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/ResultsOverlay/static/js/2.bdf72bcb.chunk.js.LICENSE.txt"
+    "url": "/ResultsOverlay/static/js/2.36c381da.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1a24f1f29f6964f81513",
-    "url": "/ResultsOverlay/static/js/main.1a3e37f2.chunk.js"
+    "revision": "ad3d7826843d702d15d1",
+    "url": "/ResultsOverlay/static/js/main.5fcbd0b7.chunk.js"
   },
   {
     "revision": "ae1a3cdcdcb41b9fe08f",
@@ -57,7 +57,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "9d2c7b554f34070523841246c93d3f3d",
-    "url": "/ResultsOverlay/static/media/Dominican Republic.9d2c7b55.png"
+    "url": "/ResultsOverlay/static/media/DominicanRepublic.9d2c7b55.png"
   },
   {
     "revision": "bb2ee83cbe18bad1e446ca873d5547ac",
@@ -65,7 +65,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "3ea3e780c9a490353f224ca8e91110fd",
-    "url": "/ResultsOverlay/static/media/Northern Ireland.3ea3e780.png"
+    "url": "/ResultsOverlay/static/media/NorthernIreland.3ea3e780.png"
   },
   {
     "revision": "1153beb415f2ee809f9206c0d3131ad7",
@@ -73,11 +73,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "20eba3c757cd0250bf6e8a61129752ea",
-    "url": "/ResultsOverlay/static/media/San Marino.20eba3c7.png"
+    "url": "/ResultsOverlay/static/media/SanMarino.20eba3c7.png"
   },
   {
     "revision": "8353480e341732afef56a0f125109011",
-    "url": "/ResultsOverlay/static/media/Saudi Arabia.8353480e.png"
+    "url": "/ResultsOverlay/static/media/SaudiArabia.8353480e.png"
   },
   {
     "revision": "816d071b1cec750b3b19e1531c79518b",
@@ -101,7 +101,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "4c302785bdd61d76ed6d99d985a77bd4",
-    "url": "/ResultsOverlay/static/media/South Korea.4c302785.png"
+    "url": "/ResultsOverlay/static/media/SouthKorea.4c302785.png"
   },
   {
     "revision": "fadc01578d0382a723743f6eb48fc357",
