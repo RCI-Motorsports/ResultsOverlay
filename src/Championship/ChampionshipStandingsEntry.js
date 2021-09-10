@@ -52,7 +52,7 @@ class ChampionshipStandingsEntry extends Component {
                 <div className='ChampionshipStandingsPositionCol' style={{ backgroundImage: `url(${positionColImg})`}}>{ this.props.entry.position }</div>
                 <div className={`ChampionshipStandingsCarNumCol ${this.props.entry.category}`} style={{ backgroundImage: `url(${numberColImg})`}}>{ this.props.entry.carNumber }</div>
                 <div className='ChampionshipStandingsFlagCol' style={{ backgroundImage: `url(${flagColImg}), url(${Countries[this.props.entry.country]})` }}></div>
-                <div className='ChampionshipStandingsNameCol'>{ this.props.entry.name }</div>
+                <div className='ChampionshipStandingsNameCol'><span>{ this.props.entry.name }</span></div>
                 <div className='ChampionshipStandingsCarCol'>{ this.props.entry.car }</div>
                 <div className='ChampionshipStandingsPointsCol'>{ this.props.entry.championshipStandings.points }</div>
             </div>

@@ -112,6 +112,14 @@
   box-sizing: border-box;
 }
 
+.ChampionshipStandingsNameCol span{
+  width: 540px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
 .ChampionshipStandingsCarCol {
   width: 590px;
   height: 50px;
