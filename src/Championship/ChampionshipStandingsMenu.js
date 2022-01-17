@@ -46,6 +46,7 @@ class ChampionshipStandingsMenu extends Component {
 
         fetch(`https://racerci.com/api/championships/standings/standings?splitId=${this.state.title}`, requestOptions)
         .then((res) => {
+            console.log(res);
             const jsonRes = JSON.parse(res);
             this.content = ParseAPIResponse(jsonRes);
             this.state.title = jsonRes.championshipName;
