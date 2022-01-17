@@ -8,7 +8,7 @@ import Azerbaijan from "./img/countries/Azerbaijan.png";
 import Bahrain from "./img/countries/Bahrain.png";
 import Barbados from "./img/countries/Barbados.png";
 import Belgium from "./img/countries/Belgium.png";
-import BosniaAndHerzegovina from "./img/countries/Bosnia & Herzegovina.png";
+import BosniaAndHerzegovina from "./img/countries/BosniaAndHerzegovina.png";
 import Brazil from "./img/countries/Brazil.png";
 import Bulgaria from "./img/countries/Bulgaria.png";
 import Canada from "./img/countries/Canada.png";
@@ -17,7 +17,7 @@ import China from "./img/countries/China.png";
 import Colombia from "./img/countries/Colombia.png";
 import Croatia from "./img/countries/Croatia.png";
 import Cuba from "./img/countries/Cuba.png";
-import Czechia from "./img/countries/CzechRepublic.png";
+import CzechRepublic from "./img/countries/CzechRepublic.png";
 import Denmark from "./img/countries/Denmark.png";
 import DominicanRepublic from "./img/countries/DominicanRepublic.png";
 import Egypt from "./img/countries/Egypt.png";
@@ -112,7 +112,7 @@ export default { Afghanistan,
     Colombia,
     Croatia,
     Cuba,
-    Czechia,
+    CzechRepublic,
     Denmark,
     DominicanRepublic,
     Egypt,
