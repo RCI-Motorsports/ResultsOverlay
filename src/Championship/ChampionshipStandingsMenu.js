@@ -34,7 +34,7 @@ class ChampionshipStandingsMenu extends Component {
         this.fReader.readAsText(this.fileInput.current.files[0], 'UTF-8');
     }
 
-    fetchStandings = () => {
+    fetchStandings = async () => {
         // fetch standings from API
         // sort results (ResultsParser.js)
         // 
@@ -44,14 +44,10 @@ class ChampionshipStandingsMenu extends Component {
             Vary: 'Origin',
         };
 
-        fetch(`https://racerci.com/api/championships/standings/standings?splitId=${this.state.title}`, requestOptions)
-        .then((res) => {
-            console.log(`res.json(): ${res.json()}`);
-            const jsonRes = JSON.parse(res);
-            this.content = ParseAPIResponse(jsonRes);
-            this.state.title = jsonRes.championshipName;
-            this.setState({ dataLoaded: true });
-        });
+        const response = await (await fetch(`https://racerci.com/api/championships/standings/standings?splitId=${this.state.title}`, requestOptions)).json();
+        this.content = ParseAPIResponse(response);
+        this.state.title = response.championshipName;
+        this.setState({ dataLoaded: true });
     }
 
     handleChange = (event) => {
