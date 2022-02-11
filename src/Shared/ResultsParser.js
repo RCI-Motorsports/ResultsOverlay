@@ -396,6 +396,7 @@ const isoCountries = {
     'SM': 'San Marino',
     'ST': 'Sao Tome And Principe',
     'SA': 'Saudi Arabia',
+    'GB-SCT': 'Scotland',
     'SN': 'Senegal',
     'RS': 'Serbia',
     'SC': 'Seychelles',
