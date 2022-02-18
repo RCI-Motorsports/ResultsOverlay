@@ -17,7 +17,7 @@ import China from "./img/countries/China.png";
 import Colombia from "./img/countries/Colombia.png";
 import Croatia from "./img/countries/Croatia.png";
 import Cuba from "./img/countries/Cuba.png";
-import CzechRepublic from "./img/countries/CzechRepublic.png";
+import Czechia from "./img/countries/Czechia.png";
 import Denmark from "./img/countries/Denmark.png";
 import DominicanRepublic from "./img/countries/DominicanRepublic.png";
 import Egypt from "./img/countries/Egypt.png";
@@ -112,7 +112,7 @@ export default { Afghanistan,
     Colombia,
     Croatia,
     Cuba,
-    CzechRepublic,
+    Czechia,
     Denmark,
     DominicanRepublic,
     Egypt,
