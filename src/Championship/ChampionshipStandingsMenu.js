@@ -44,7 +44,7 @@ class ChampionshipStandingsMenu extends Component {
             Vary: 'Origin',
         };
 
-        const response = await (await fetch(`https://racerci.com/api/championships/standings/standings?splitId=${this.state.title}`, requestOptions)).json();
+        const response = await (await fetch(`https://racerci.com/api/championships/standings/broadcast?splitId=${this.state.title}`, requestOptions)).json();
         this.content = ParseAPIResponse(response);
         this.state.title = response.championshipName;
         this.setState({ dataLoaded: true });
