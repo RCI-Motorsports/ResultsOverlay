@@ -80,7 +80,7 @@ const PAGINATION_ORDER = [
 export const ParseAPIResponse = (jsonData) => {
     const standingEntries = [];
 
-    const isTeamEvent = false; //TODO: read actual state here
+    const isTeamEvent = jsonData.teamEvent;
 
     Object.keys(jsonData.standings).forEach(carClass => {
         Object.keys(jsonData.standings[carClass]).forEach(category => {
@@ -90,7 +90,7 @@ export const ParseAPIResponse = (jsonData) => {
                     id: line.id,
                     carNumber: line.signup.raceNumber,
                     class: _getClass(line.signup.car.value),
-                    name: isTeamEvent ? '' : line.signup.drivers[0].userFullName,
+                    name: isTeamEvent ? line.signup.fullTeamName : line.signup.drivers[0].userFullName,
                     car: line.signup.car.label,
                     category: categoryText,
                     championshipStandings: {
