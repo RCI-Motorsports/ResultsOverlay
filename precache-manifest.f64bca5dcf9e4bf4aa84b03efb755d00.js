@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "11b451ea8208dd36f914897379498dc8",
+    "revision": "b77c372bc53b57d92205a0f33b7f671a",
     "url": "/ResultsOverlay/index.html"
   },
   {
-    "revision": "8d9d2349c78b33c17bd9",
-    "url": "/ResultsOverlay/static/css/main.bf93d29c.chunk.css"
+    "revision": "1f4927652943a999b818",
+    "url": "/ResultsOverlay/static/css/main.83535c85.chunk.css"
   },
   {
-    "revision": "d153d7f60474bf1c6a0d",
-    "url": "/ResultsOverlay/static/js/2.bc1c465c.chunk.js"
+    "revision": "ff8fe60787fc67d5e984",
+    "url": "/ResultsOverlay/static/js/2.4515b45b.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/ResultsOverlay/static/js/2.bc1c465c.chunk.js.LICENSE.txt"
+    "url": "/ResultsOverlay/static/js/2.4515b45b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8d9d2349c78b33c17bd9",
-    "url": "/ResultsOverlay/static/js/main.f8d918fc.chunk.js"
+    "revision": "1f4927652943a999b818",
+    "url": "/ResultsOverlay/static/js/main.42f4319e.chunk.js"
   },
   {
     "revision": "ae1a3cdcdcb41b9fe08f",
@@ -40,20 +40,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ResultsOverlay/static/media/Brazil.60aaffda.png"
   },
   {
-    "revision": "d047f5aabd3b1e47b99e5143681ebd8d",
-    "url": "/ResultsOverlay/static/media/Champ_Standings_Slide_AM.d047f5aa.svg"
+    "revision": "ea0f3c7e08d965cc690bb1da426738f0",
+    "url": "/ResultsOverlay/static/media/Champ_Standings_Slide_AM.ea0f3c7e.svg"
   },
   {
-    "revision": "6f8ef5a83ae47c9ad1e244303b6997ba",
-    "url": "/ResultsOverlay/static/media/Champ_Standings_Slide_PRO.6f8ef5a8.svg"
+    "revision": "ad0afcde4f828e956eec92943f83c677",
+    "url": "/ResultsOverlay/static/media/Champ_Standings_Slide_PRO.ad0afcde.svg"
   },
   {
-    "revision": "d49b8824ad0e9146850245b8acb30172",
-    "url": "/ResultsOverlay/static/media/Champ_Standings_Slide_ROOKIE.d49b8824.svg"
+    "revision": "f9f411f0c11c025b7e9f5e0cecfd748e",
+    "url": "/ResultsOverlay/static/media/Champ_Standings_Slide_ROOKIE.f9f411f0.svg"
   },
   {
-    "revision": "65ad6855eeee31fdf65841a01aec5c98",
-    "url": "/ResultsOverlay/static/media/Champ_Standings_Slide_SILVER.65ad6855.svg"
+    "revision": "2bb73748790967f7e06ef4020edb65ec",
+    "url": "/ResultsOverlay/static/media/Champ_Standings_Slide_SILVER.2bb73748.svg"
   },
   {
     "revision": "9d2c7b554f34070523841246c93d3f3d",
@@ -84,20 +84,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ResultsOverlay/static/media/Serbia.816d071b.png"
   },
   {
-    "revision": "0cd80b336afd1c6f9f6d6072790be402",
-    "url": "/ResultsOverlay/static/media/Session_Results_Slide_AM.0cd80b33.svg"
+    "revision": "61cef59eede91cbca61bcbeafa214246",
+    "url": "/ResultsOverlay/static/media/Session_Results_Slide_AM.61cef59e.svg"
   },
   {
-    "revision": "6768383053951d3d4a32e0570b59c64e",
-    "url": "/ResultsOverlay/static/media/Session_Results_Slide_PRO.67683830.svg"
+    "revision": "60d19d6383e1dce04c221a7fb4836639",
+    "url": "/ResultsOverlay/static/media/Session_Results_Slide_PRO.60d19d63.svg"
   },
   {
-    "revision": "f96f5f4f64a1390734fc78f6c9851793",
-    "url": "/ResultsOverlay/static/media/Session_Results_Slide_ROOKIE.f96f5f4f.svg"
+    "revision": "7409b2d37327a3fdab0f7b14cf6bdc43",
+    "url": "/ResultsOverlay/static/media/Session_Results_Slide_ROOKIE.7409b2d3.svg"
   },
   {
-    "revision": "dde2488c7c4b0b91d4ece4efbfacd1e2",
-    "url": "/ResultsOverlay/static/media/Session_Results_Slide_SILVER.dde2488c.svg"
+    "revision": "0abfeede40116fb8c6b6cfe4d659fd82",
+    "url": "/ResultsOverlay/static/media/Session_Results_Slide_SILVER.0abfeede.svg"
   },
   {
     "revision": "4c302785bdd61d76ed6d99d985a77bd4",
@@ -112,8 +112,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ResultsOverlay/static/media/Standing_Title.588cc981.svg"
   },
   {
-    "revision": "f5f3eef2b4c6f99c00afb42b35dd6fb4",
-    "url": "/ResultsOverlay/static/media/Title_Slide.f5f3eef2.svg"
+    "revision": "286da23730d7fda9d8dba5e0d90abbb8",
+    "url": "/ResultsOverlay/static/media/Title_Slide.286da237.svg"
   },
   {
     "revision": "94f3177d4858c240b2be15d5c2b4de33",

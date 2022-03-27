@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ResultsOverlay/static/css/main.bf93d29c.chunk.css",
-    "main.js": "/ResultsOverlay/static/js/main.f8d918fc.chunk.js",
-    "main.js.map": "/ResultsOverlay/static/js/main.f8d918fc.chunk.js.map",
+    "main.css": "/ResultsOverlay/static/css/main.83535c85.chunk.css",
+    "main.js": "/ResultsOverlay/static/js/main.42f4319e.chunk.js",
+    "main.js.map": "/ResultsOverlay/static/js/main.42f4319e.chunk.js.map",
     "runtime-main.js": "/ResultsOverlay/static/js/runtime-main.dfcb15a1.js",
     "runtime-main.js.map": "/ResultsOverlay/static/js/runtime-main.dfcb15a1.js.map",
-    "static/js/2.bc1c465c.chunk.js": "/ResultsOverlay/static/js/2.bc1c465c.chunk.js",
-    "static/js/2.bc1c465c.chunk.js.map": "/ResultsOverlay/static/js/2.bc1c465c.chunk.js.map",
+    "static/js/2.4515b45b.chunk.js": "/ResultsOverlay/static/js/2.4515b45b.chunk.js",
+    "static/js/2.4515b45b.chunk.js.map": "/ResultsOverlay/static/js/2.4515b45b.chunk.js.map",
     "index.html": "/ResultsOverlay/index.html",
-    "precache-manifest.acd80d1c1383e426693410cf0c972239.js": "/ResultsOverlay/precache-manifest.acd80d1c1383e426693410cf0c972239.js",
+    "precache-manifest.f64bca5dcf9e4bf4aa84b03efb755d00.js": "/ResultsOverlay/precache-manifest.f64bca5dcf9e4bf4aa84b03efb755d00.js",
     "service-worker.js": "/ResultsOverlay/service-worker.js",
-    "static/css/main.bf93d29c.chunk.css.map": "/ResultsOverlay/static/css/main.bf93d29c.chunk.css.map",
-    "static/js/2.bc1c465c.chunk.js.LICENSE.txt": "/ResultsOverlay/static/js/2.bc1c465c.chunk.js.LICENSE.txt",
+    "static/css/main.83535c85.chunk.css.map": "/ResultsOverlay/static/css/main.83535c85.chunk.css.map",
+    "static/js/2.4515b45b.chunk.js.LICENSE.txt": "/ResultsOverlay/static/js/2.4515b45b.chunk.js.LICENSE.txt",
     "static/media/Afghanistan.png": "/ResultsOverlay/static/media/Afghanistan.4127c188.png",
     "static/media/Andorra.png": "/ResultsOverlay/static/media/Andorra.5f759880.png",
     "static/media/Argentina.png": "/ResultsOverlay/static/media/Argentina.c606490b.png",
     "static/media/Brazil.png": "/ResultsOverlay/static/media/Brazil.60aaffda.png",
-    "static/media/App.css": "/ResultsOverlay/static/media/Title_Slide.f5f3eef2.svg",
+    "static/media/App.css": "/ResultsOverlay/static/media/Title_Slide.286da237.svg",
     "static/media/DominicanRepublic.png": "/ResultsOverlay/static/media/DominicanRepublic.9d2c7b55.png",
     "static/media/International.png": "/ResultsOverlay/static/media/International.bb2ee83c.png",
     "static/media/NorthernIreland.png": "/ResultsOverlay/static/media/NorthernIreland.3ea3e780.png",
@@ -31,8 +31,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.dfcb15a1.js",
-    "static/js/2.bc1c465c.chunk.js",
-    "static/css/main.bf93d29c.chunk.css",
-    "static/js/main.f8d918fc.chunk.js"
+    "static/js/2.4515b45b.chunk.js",
+    "static/css/main.83535c85.chunk.css",
+    "static/js/main.42f4319e.chunk.js"
   ]
 }
