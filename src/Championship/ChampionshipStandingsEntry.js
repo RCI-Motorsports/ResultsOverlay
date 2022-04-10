@@ -29,15 +29,15 @@ class ChampionshipStandingsEntry extends Component {
         var numberColImg    = undefined;
         var flagColImg      = undefined;
 
-        if (this.props.entry.category === 'PRO') {
+        if (this.props.entry.category === 3) {
             positionColImg = PositionPRO;
             numberColImg = NumberPRO;
             flagColImg = FlagPRO;
-        } else if (this.props.entry.category === 'SILVER') {
+        } else if (this.props.entry.category === 2) {
             positionColImg = PositionSILVER;
             numberColImg = NumberSILVER;
             flagColImg = FlagSILVER;
-        } else if (this.props.entry.category === 'AM') {
+        } else if (this.props.entry.category === 1) {
             positionColImg = PositionAM;
             numberColImg = NumberAM;
             flagColImg = FlagAM;
@@ -50,7 +50,7 @@ class ChampionshipStandingsEntry extends Component {
         return (
             <div className={`Row`}>
                 <div className='ChampionshipStandingsPositionCol' style={{ backgroundImage: `url(${positionColImg})`}}>{ this.props.entry.position }</div>
-                <div className={`ChampionshipStandingsCarNumCol ${this.props.entry.category}`} style={{ backgroundImage: `url(${numberColImg})`}}>{ this.props.entry.carNumber }</div>
+                <div className={`ChampionshipStandingsCarNumCol ${this.props.entry.categoryName}`} style={{ backgroundImage: `url(${numberColImg})`}}>{ this.props.entry.carNumber }</div>
                 <div className='ChampionshipStandingsFlagCol' style={{ backgroundImage: `url(${flagColImg}), url(${Countries[this.props.entry.country]})` }}></div>
                 <div className='ChampionshipStandingsNameCol'><span>{ this.props.entry.name }</span></div>
                 <div className='ChampionshipStandingsCarCol'>{ this.props.entry.car }</div>

@@ -47,21 +47,31 @@ const PAGINATION_ORDER = [
     'GT3-SILVER',
     'GT3-AM',
     'GT3-ROOKIE',
-    'ST-PRO',
-    'ST-SILVER',
-    'ST-AM',
-    'ST-ROOKIE',
+    'GT4-PRO',
+    'GT4-SILVER',
+    'GT4-AM',
+    'GT4-ROOKIE',
     'CUP-PRO',
     'CUP-SILVER',
     'CUP-AM',
     'CUP-ROOKIE',
-    'GT4-PRO',
-    'GT4-SILVER',
-    'GT4-AM',
-    'GT4-ROOKIE'
+    'ST-PRO',
+    'ST-SILVER',
+    'ST-AM',
+    'ST-ROOKIE',
+    'TCX-PRO',
+    'TCX-SILVER',
+    'TCX-AM',
+    'TCX-ROOKIE',
+    'CHL-PRO',
+    'CHL-SILVER',
+    'CHL-AM',
+    'CHL-ROOKIE'
 ];
 
 /*
+-1 for cup: mixed
+-1 for category: overall
 
             id: idx,
             carNumber: entry[COLUMN_MAPPING.car_num],
@@ -79,20 +89,24 @@ const PAGINATION_ORDER = [
 
 export const ParseAPIResponse = (jsonData) => {
     const standingEntries = [];
+    var mode = 1;
 
     const isTeamEvent = jsonData.teamEvent;
 
     Object.keys(jsonData.standings).forEach(carClass => {
+        mode = carClass == -1 ? 3 : mode;
         Object.keys(jsonData.standings[carClass]).forEach(category => {
-            const categoryText = _getCategory(category);
+            mode = category == -1 ? 2 : mode;
             jsonData.standings[carClass][category].forEach(line => {
                 const newLine = {
                     id: line.id,
                     carNumber: line.signup.raceNumber,
-                    class: _getClass(line.signup.car.value),
+                    class: line.signup.car.cup,
+                    className: _getClass(line.signup.car.cup),
                     name: isTeamEvent ? line.signup.fullTeamName : line.signup.drivers[0].userFullName,
                     car: line.signup.car.label,
-                    category: categoryText,
+                    category: line.signup.driverCategory,
+                    categoryName: _getCategory(line.signup.driverCategory),
                     championshipStandings: {
                         points: line.position !== null ? parseInt(line.points) : '-',
                         deficit: 0
@@ -100,44 +114,41 @@ export const ParseAPIResponse = (jsonData) => {
                     country: line.signup.fullNationality.replace(/\&/m, 'And').replace(/\s/m, '')
                 }
 
-                standingEntries.push(newLine)
+                standingEntries.push(newLine);
             })
         });
     });
 
-    return _categorizeEntryObjects(standingEntries);
+    return _categorizeEntryObjects(standingEntries, mode);
 };
 
-const _getClass = (carModel) => {
-    if (parseInt(carModel, 10) === 18) {
-        return 'ST';
+const _getClass = (cup) => {
+    switch (cup) {
+        case -1: return 'Mixed';
+        case 1: return 'GT3';
+        case 2: return 'GT4';
+        case 3: return 'CUP';
+        case 4: return 'ST';
+        case 5: return 'TCX';
+        case 6: return 'CHL';
     }
-    if (parseInt(carModel, 10) === 9) {
-        return 'CUP';
-    }
-
-    return carModel < 50 ? 'GT3' : 'GT4';
 };
 
 const _getCategory = (cupCategory) => {
     switch (cupCategory) {
-        case '3':
-            return 'PRO';
-        case '2':
-            return 'SILVER';
-        case '1':
-            return 'AM';
-        case '0':
-            return 'ROOKIE';
-        default:
-            return 'ROOKIE';
+        case -1: return 'Overall';
+        case 0: return 'ROOKIE';
+        case 1: return 'AM';
+        case 2: return 'SILVER';
+        case 3: return 'PRO';
+        default: return 'ROOKIE';
     };
 };
 
 // TODO: support team name mapping file
 const _getEntryName = (line, teamNameMapping) => {
     if (!teamNameMapping) {
-        return `${line.currentDriver.firstName} ${line.currentDriver.lastName}`;
+        // return `${line.currentDriver.firstName} ${line.currentDriver.lastName}`;
     }
 
     return '---';
@@ -159,17 +170,19 @@ const _msToTime = (ms) => {
     return msString
 }
 
-const _categorizeEntryObjects = (entries) => {
-    const categorizedLines = entries.reduce((result, value) => {
-        const key = `${value.class}-${value.category}`;
+const _categorizeEntryObjects = (entries, mode) => {
+    const categorizedLines = entries.reduce((result, line) => {
+        const classStr = mode == 3 ? 'MIXED' : _getClass(line.class)
+        const categoryStr = mode == 2 ? 'OVERALL' : _getCategory(line.category)
+
+        const key = `${classStr}-${categoryStr}`;
         if (!result[key]) {
             result[key] = [];
         }
-        result[key].push(value);
+        result[key].push(line);
         return result;
     }, {});
-
-
+    
     return Object.keys(categorizedLines).map(key => {
         let category = categorizedLines[key];
         const pages = [];

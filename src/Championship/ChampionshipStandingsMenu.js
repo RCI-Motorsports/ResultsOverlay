@@ -15,11 +15,10 @@ class ChampionshipStandingsMenu extends Component {
 
         this.readFromAPI = props.readFromAPI
 
-        this.state = { dataLoaded: false };
         this.fileInput = React.createRef();
         this.fReader = new FileReader();
 
-        this.state = {}
+        this.state = { displayMode: "1" }
     }
 
     onFileRead = (e) => {
@@ -44,20 +43,24 @@ class ChampionshipStandingsMenu extends Component {
             Vary: 'Origin',
         };
 
-        const response = await (await fetch(`https://racerci.com/api/championships/standings/broadcast?splitId=${this.state.title}`, requestOptions)).json();
+        const response = await (await fetch(`https://racerci.com/api/championships/standings/broadcast?splitId=${this.state.splitId}&mode=${this.state.displayMode}`, requestOptions)).json();
         this.content = ParseAPIResponse(response);
         this.state.title = response.championshipName;
         this.setState({ dataLoaded: true });
     }
 
-    handleChange = (event) => {
-        this.setState({ title: event.target.value });
+    updateSplitId = (event) => {
+        this.setState({ splitId: event.target.value });
+    }
+
+    updateDisplayMode = (event) => {
+        this.setState({ displayMode: event.target.value })
     }
 
     render() {
         let component =
             <div className='MainMenu'>
-                <div><input type="text" placeholder='Title..' onChange={this.handleChange} style={{width: '500px'}}/></div>
+                <div><input type="text" placeholder='Title..' onChange={this.updateSplitId} style={{width: '500px'}}/></div>
                 <div><input type="file" ref={this.fileInput} /></div>
                 <div><button type="button" onClick={this.onUpload}>load</button></div>
             </div>;
@@ -65,7 +68,12 @@ class ChampionshipStandingsMenu extends Component {
         if (this.readFromAPI) {
             component = 
                 <div className='MainMenu'>
-                    <div><input type="text" placeholder='Split ID' onChange={this.handleChange} style={{width: '80px'}}/> </div>
+                    <div><input type="text" placeholder='Split ID' onChange={this.updateSplitId} style={{width: '80px'}}/> </div>
+                    <select onChange={this.updateDisplayMode}>
+                        <option value="1">Normal</option>
+                        <option value="2">Overall (Category)</option>
+                        <option value="3">Mixed (Cups)</option>
+                    </select>
                     <div><button type="button" onClick={this.fetchStandings}>load</button></div>
                 </div>            
         }
