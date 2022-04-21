@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ResultsOverlay/static/css/main.78061e66.chunk.css",
-    "main.js": "/ResultsOverlay/static/js/main.d81e72cb.chunk.js",
-    "main.js.map": "/ResultsOverlay/static/js/main.d81e72cb.chunk.js.map",
+    "main.css": "/ResultsOverlay/static/css/main.83535c85.chunk.css",
+    "main.js": "/ResultsOverlay/static/js/main.6fbdcaa2.chunk.js",
+    "main.js.map": "/ResultsOverlay/static/js/main.6fbdcaa2.chunk.js.map",
     "runtime-main.js": "/ResultsOverlay/static/js/runtime-main.dfcb15a1.js",
     "runtime-main.js.map": "/ResultsOverlay/static/js/runtime-main.dfcb15a1.js.map",
     "static/js/2.4515b45b.chunk.js": "/ResultsOverlay/static/js/2.4515b45b.chunk.js",
     "static/js/2.4515b45b.chunk.js.map": "/ResultsOverlay/static/js/2.4515b45b.chunk.js.map",
     "index.html": "/ResultsOverlay/index.html",
-    "precache-manifest.085b8d2e0cca43e6837e68fc51f4b342.js": "/ResultsOverlay/precache-manifest.085b8d2e0cca43e6837e68fc51f4b342.js",
+    "precache-manifest.01145c2a608fd36f5e97fd008f5ca3a4.js": "/ResultsOverlay/precache-manifest.01145c2a608fd36f5e97fd008f5ca3a4.js",
     "service-worker.js": "/ResultsOverlay/service-worker.js",
-    "static/css/main.78061e66.chunk.css.map": "/ResultsOverlay/static/css/main.78061e66.chunk.css.map",
+    "static/css/main.83535c85.chunk.css.map": "/ResultsOverlay/static/css/main.83535c85.chunk.css.map",
     "static/js/2.4515b45b.chunk.js.LICENSE.txt": "/ResultsOverlay/static/js/2.4515b45b.chunk.js.LICENSE.txt",
     "static/media/Afghanistan.png": "/ResultsOverlay/static/media/Afghanistan.4127c188.png",
     "static/media/Andorra.png": "/ResultsOverlay/static/media/Andorra.5f759880.png",
     "static/media/Argentina.png": "/ResultsOverlay/static/media/Argentina.c606490b.png",
     "static/media/Brazil.png": "/ResultsOverlay/static/media/Brazil.60aaffda.png",
-    "static/media/App.css": "/ResultsOverlay/static/media/Title_Slide.f5f3eef2.svg",
+    "static/media/App.css": "/ResultsOverlay/static/media/Title_Slide.286da237.svg",
     "static/media/DominicanRepublic.png": "/ResultsOverlay/static/media/DominicanRepublic.9d2c7b55.png",
     "static/media/International.png": "/ResultsOverlay/static/media/International.bb2ee83c.png",
     "static/media/NorthernIreland.png": "/ResultsOverlay/static/media/NorthernIreland.3ea3e780.png",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.dfcb15a1.js",
     "static/js/2.4515b45b.chunk.js",
-    "static/css/main.78061e66.chunk.css",
-    "static/js/main.d81e72cb.chunk.js"
+    "static/css/main.83535c85.chunk.css",
+    "static/js/main.6fbdcaa2.chunk.js"
   ]
 }
