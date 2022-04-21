@@ -108,7 +108,7 @@ export const ParseAPIResponse = (jsonData) => {
                     category: line.signup.driverCategory,
                     categoryName: _getCategory(line.signup.driverCategory),
                     championshipStandings: {
-                        points: line.position !== null ? parseInt(line.points) : '-',
+                        points: line.position !== null ? parseFloat(line.points) : '-',
                         deficit: 0
                     },
                     country: line.signup.fullNationality.replace(/\&/m, 'And').replace(/\s/m, '')
