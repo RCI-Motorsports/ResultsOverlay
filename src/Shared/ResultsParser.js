@@ -111,7 +111,7 @@ export const ParseAPIResponse = (jsonData) => {
                         points: line.position !== null ? parseFloat(line.points) : '-',
                         deficit: 0
                     },
-                    country: line.signup.fullNationality.replace(/\&/m, 'And').replace(/\s/m, '')
+                    country: line.signup.fullNationality.replace(/\&/mg, 'And').replace(/\sand\s/mg, 'And').replace(/\s/mg, '')
                 }
 
                 standingEntries.push(newLine);
