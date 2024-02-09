@@ -1,6 +1,7 @@
 import Afghanistan from "./img/countries/Afghanistan.png";
 import Andorra from "./img/countries/Andorra.png";
 import Argentina from "./img/countries/Argentina.png";
+import Aruba from "./img/countries/Aruba.png";
 import Armenia from "./img/countries/Armenia.png";
 import Australia from "./img/countries/Australia.png";
 import Austria from "./img/countries/Austria.png";
@@ -98,6 +99,7 @@ export default { Afghanistan,
     Andorra,
     Argentina,
     Armenia,
+    Aruba,
     Australia,
     Austria,
     Azerbaijan,
@@ -188,5 +190,5 @@ export default { Afghanistan,
     Unknown,
     Venezuela,
     Wales,
-    Zimbabwe 
+    Zimbabwe
 };

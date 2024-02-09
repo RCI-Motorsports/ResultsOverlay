@@ -17,7 +17,7 @@ import Countries from "../Countries";
  *                          position: "",
  *                          championshipStandings: {
  *                              points: "",
- *                              deficit: "", 
+ *                              deficit: "",
  *                          }
  *                          timing: {
  *                              bestLap: "",
@@ -26,9 +26,9 @@ import Countries from "../Countries";
  *           ]
  *      }
  * ]
- * 
+ *
  * The array should be sorted by:
- *  
+ *
  * 1. 'GT3-PRO',
  * 2. 'GT3-SILVER',
  * 3. 'GT3-AM',
@@ -37,7 +37,7 @@ import Countries from "../Countries";
  * 6. 'GT4-SILVER',
  * 7. 'GT4-AM',
  * 8. 'GT4-ROOKIE'
- * 
+ *
  */
 
 const LINES_PER_PAGE = 10;
@@ -131,6 +131,7 @@ const _getClass = (cup) => {
         case 4: return 'ST';
         case 5: return 'TCX';
         case 6: return 'CHL';
+        case 7: return 'GT2';
     }
 };
 
@@ -182,7 +183,7 @@ const _categorizeEntryObjects = (entries, mode) => {
         result[key].push(line);
         return result;
     }, {});
-    
+
     return Object.keys(categorizedLines).map(key => {
         let category = categorizedLines[key];
         const pages = [];
