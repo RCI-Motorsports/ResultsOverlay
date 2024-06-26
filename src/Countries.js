@@ -94,8 +94,11 @@ import Unknown from "./img/countries/International.png";
 import Venezuela from "./img/countries/Venezuela.png";
 import Wales from "./img/countries/Wales.png";
 import Zimbabwe from "./img/countries/Zimbabwe.png";
+import SaintVincentAndtheGrenadines from "./img/countries/Saint-Vincent-and-the-Grenadines.png";
+import TrinidadAndTobago from "./img/countries/Trinidad-and-Tobago.png";
 
-export default { Afghanistan,
+export default {
+    Afghanistan,
     Andorra,
     Argentina,
     Armenia,
@@ -190,5 +193,7 @@ export default { Afghanistan,
     Unknown,
     Venezuela,
     Wales,
-    Zimbabwe
+    Zimbabwe,
+    SaintVincentAndtheGrenadines,
+    TrinidadAndTobago
 };
